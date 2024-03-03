@@ -1,0 +1,30 @@
+
+const NAVITEMS = [
+    {"label": "Home", "link": "./", "active": true},
+    {"label": "What to expect", "link": "./what-to-expect"},
+    {"label": "Coaching Services", "link": "./coaching-services"},
+    {"label": "Who we are", "link": "./who-we-are"},
+    {"label": "Testimonials", "link": "./testimonials"},     
+    {"label": "Contact", "link": "./contact"},  
+    // {"label": "Free Downloads", "link": "./downloads"},
+    // {"label": "Merch", "link": "./merch"},
+    // {"label": "Podcast", "link": "./podcast"},
+  ];
+
+const NavBar = () => {
+    return (
+        <nav class="main-nav bg-zinc-950 text-white sticky top-0 z-10 w-full">
+        <ul class="flex justify-end items-center list-none m-0 px-0">
+            {NAVITEMS.map((navItem, index) => {
+                return (
+                <li key={index} class="uppercase py-3.5 px-4 no-underline hover:bg-esc-red hover:cursor-pointer">
+                    <a href={navItem.link} class="block w-full h-full">{navItem.label}</a>
+                </li>
+                )            
+            })}
+        </ul>
+        </nav>
+    )
+}
+
+export default NavBar;

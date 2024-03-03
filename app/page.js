@@ -1,44 +1,20 @@
-import Image from "next/image";
-
-const NAVITEMS = [
-  {"label": "Home", "link": "./", "active": true},
-  {"label": "What to expect", "link": "./what-to-expect"},
-  {"label": "Coaching Services", "link": "./coaching-services"},
-  {"label": "Who we are", "link": "./who-we-are"},
-  {"label": "Testimonials", "link": "./testimonials"},     
-  {"label": "Contact", "link": "./contact"},  
-  // {"label": "Free Downloads", "link": "./downloads"},
-  // {"label": "Merch", "link": "./merch"},
-  // {"label": "Podcast", "link": "./podcast"},
-];
-
-const NavBar = () => {
- return (
-  <nav class="main-nav bg-black text-white sticky top-0">
-    <ul class="flex justify-end items-center list-none m-0 px-0">
-        {NAVITEMS.map((navItem, index) => {
-          return (
-            <li key={index} class="py-3.5 px-4 no-underline hover:bg-esc-red hover:cursor-pointer">
-              <a href={navItem.link} class="block w-full h-full">{navItem.label}</a>
-            </li>
-          )            
-        })}
-    </ul>
-  </nav>
- )
-}
+import NavBar from "./ui/nav";
+import Header from "./ui/header";
+import Trainer from "./ui/trainers";
 
 export default function Home() {
   return (
-    <>
+    <>  
       <NavBar />
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <header>Banner- with strap line</header>
-        <section>Intro who I am, what I can offer</section>
-        <section>Before and after pictures</section>
-        <section>Sponsorship logos</section>
-        <section>Subscribe to newsletter</section>
-        <footer>Footer</footer>
+      <main className="flex flex-col w-full overflow-hidden">
+        <Header />
+        <div className="w-full flex flex-col">
+          <Trainer />
+          <section className="bg-teal-300 h-64 px-36">Before and after pictures</section>
+          <section className="bg-teal-400 h-64 px-36">Sponsorship logos</section> 
+          <section className="bg-teal-500 h-64 px-36">Subscribe to newsletter</section>
+          <footer className="bg-zinc-950 h-64 px-36 text-white">Footer</footer>
+        </div>
       </main>
     </>
   );
