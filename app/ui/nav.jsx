@@ -13,12 +13,12 @@ const NAVITEMS = [
 
 const NavBar = () => {
     return (
-        <nav className="main-nav bg-zinc-950 text-white sticky top-0 z-10 w-full">
+        <nav className="main-nav bg-zinc-950 text-white sticky top-0 z-10 ">
         <ul className="flex justify-end items-center list-none m-0 px-0">
             {NAVITEMS.map((navItem, index) => {
                 return (
                 <li key={index} className="uppercase py-3.5 px-4 no-underline hover:bg-esc-red hover:cursor-pointer">
-                    <a href={navItem.link} className="block w-full h-full">{navItem.label}</a>
+                    <a href={navItem.link}>{navItem.label}</a>
                 </li>
                 )            
             })}

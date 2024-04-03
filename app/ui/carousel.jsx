@@ -1,77 +1,65 @@
 'use client'
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from "next/image";
+import {
+  StackedCarousel,
+  ResponsiveContainer,
+} from "react-stacked-center-carousel";
 
-const IMAGES = [
-  "/slider/image-1.png", 
-  "/slider/image-2.png", 
-  "/slider/image-3.jpg", 
-  "/slider/image-4.png", 
-  "/slider/image-5.jpg", 
+const data = [
+  {cover: "/slider/image-1.png", title: "image 1"},
+  {cover: "/slider/image-2.png", title: "image 2"},
+  {cover: "/slider/image-3.jpg", title: "image 3"}, 
+  {cover: "/slider/image-4.png", title: "image 4"}, 
+  {cover: "/slider/image-5.jpg", title: "image 5"}, 
 ];
 
 const ImageCarousel = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // useEffect(() => {
-  //   carouselRef.current.style.transition = 'transform 0.5s ease-in-out';
-  //   carouselRef.current.style.transform = `translateX(-${currentImageIndex * 100}%)`;
-  // }, [currentImageIndex]);
-
-  const previousImageIndex = (currentImageIndex - 1 + IMAGES.length) % IMAGES.length;
-  const nextImageIndex = (currentImageIndex + 1) % IMAGES.length;
-
-  const goToPreviousImage = () => {
-    setCurrentImageIndex(previousImageIndex);
-  };
-
-  const goToNextImage = () => {
-    setCurrentImageIndex(nextImageIndex); 
-  };
-
+  const ref = React.useRef();
+ 
   return (
-    <section className="carousel flex flex-wrap py-10 justify-center items-center m-0">
-      <button className="border rounded-full border-gray-300 hover:border-2 w-10 h-10 items-center justify-center pt-1 mr-2" onClick={goToPreviousImage}>
-        <span className="material-symbols-outlined">
-          arrow_back
-        </span>
-      </button>
-
-      <div className="preview-prev mr-2">
-        <Image
-          src={IMAGES[previousImageIndex]}
-          alt={`Previous before and after picture`}
-          height={300}
-          width={300}
-        />
-      </div>
-
-      <div className="carousel-content">
-        <Image
-          src={IMAGES[currentImageIndex]}
-          alt={`Current before and after picture`} 
-          height={400}
-          width={400}
-        />
-      </div>
-      
-      <div className="preview-next ml-2">
-        <Image
-          src={IMAGES[nextImageIndex]}
-          alt={`Next before and after picture`}
-          height={300}
-          width={300}
-        />
-      </div>
-      
-      <button className="border rounded-full border-gray-300 hover:border-2 w-10 h-10 items-center justify-center pt-1 ml-2" onClick={goToNextImage}>
-        <span className="material-symbols-outlined">
-            arrow_forward
-        </span>
-      </button>
-    </section>
+    <ResponsiveContainer
+      carouselRef={ref}
+      render={(parentWidth, carouselRef) => {
+        let currentVisibleSlide = 5;
+        if (parentWidth <= 1440) currentVisibleSlide = 3;
+        else if (parentWidth <= 1080) currentVisibleSlide = 1;
+        return (
+          <StackedCarousel
+            ref={carouselRef}
+            data={data}
+            carouselWidth={parentWidth}
+            slideWidth={350}
+            height={516}
+            slideComponent={Slide}
+            maxVisibleSlide={5}
+            currentVisibleSlide={currentVisibleSlide}
+            useGrabCursor={true}
+          />
+        );
+      }}
+    />
   );
 };
+
+const Slide = React.memo(function slide(props) {
+  const { data, dataIndex } = props;
+  const { cover } = data[dataIndex];
+
+  return (
+    <div className='bg-white rounded-2xl'>
+      <Image
+        src={cover}
+        draggable={false}
+        alt={`Transformational before and after picture`} 
+        height={300}
+        width={300} 
+        className='mr-2 ml-2 mt-10 mb-10 inline-block'
+      />
+    </div>
+  );
+});
 
 export default ImageCarousel;

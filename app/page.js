@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <>  
       <NavBar />
-      <main className="flex flex-col w-full overflow-hidden">
+      <main>
         <Header />
-        <div className="w-full flex flex-col">
+        <div>
           <Trainer />
           <ImageCarousel />
           <section className="bg-teal-400 h-64 px-36">Sponsorship logos</section> 

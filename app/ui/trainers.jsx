@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Trainers = () => {
     return (
-        <section className="trainers bg-esc-red flex flex-col lg:flex-row items-center p-9 px-10 lg:px-32 text-white">
+        <section className="bg-esc-red flex flex-col lg:flex-row items-center p-9 px-10 lg:px-32 text-white">
             <Image 
                 src="/esc-trainers.png" 
                 width={500} 
