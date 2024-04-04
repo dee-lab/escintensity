@@ -20,7 +20,12 @@ export default function Home() {
                 height={200}
                 alt="Liberty Supplements logo" 
                 className="" />
-              <Image src="/logo-source-performance.png" 
+              <Image src="/logo-power-stone.png" 
+                width={200} 
+                height={200}
+                alt="Powerstone logo" 
+                className="" />
+                <Image src="/logo-source-performance.png" 
                 width={200} 
                 height={200}
                 alt="Source Performance logo" 
