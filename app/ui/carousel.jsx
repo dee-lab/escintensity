@@ -23,7 +23,7 @@ const ImageCarousel = () => {
     <ResponsiveContainer
       carouselRef={ref}
       render={(parentWidth, carouselRef) => {
-        let currentVisibleSlide = 5;
+        let currentVisibleSlide = 3;
         if (parentWidth <= 1440) currentVisibleSlide = 3;
         else if (parentWidth <= 1080) currentVisibleSlide = 1;
         return (
@@ -32,9 +32,8 @@ const ImageCarousel = () => {
             data={data}
             carouselWidth={parentWidth}
             slideWidth={350}
-            height={516}
             slideComponent={Slide}
-            maxVisibleSlide={5}
+            maxVisibleSlide={3}
             currentVisibleSlide={currentVisibleSlide}
             useGrabCursor={true}
           />
@@ -49,14 +48,14 @@ const Slide = React.memo(function slide(props) {
   const { cover } = data[dataIndex];
 
   return (
-    <div className='bg-white rounded-2xl'>
+    <div className='bg-white rounded-xl'>
       <Image
         src={cover}
         draggable={false}
         alt={`Transformational before and after picture`} 
         height={300}
         width={300} 
-        className='mr-2 ml-2 mt-10 mb-10 inline-block'
+        className='m-2 inline-block'
       />
     </div>
   );

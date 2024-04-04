@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const Trainers = () => {
     return (
-        <section className="bg-esc-red flex flex-col lg:flex-row items-center p-9 px-10 lg:px-32 text-white">
+        <section className="bg-zinc-300 flex flex-col lg:flex-row items-center p-9 px-10 lg:px-40 text-black">
             <Image 
                 src="/esc-trainers.png" 
-                width={500} 
-                height={500} 
+                width={450} 
+                height={450} 
                 alt="ESC Trainers, Joel and Craig standing side by side" 
                 className="" />
             <div className="flex flex-col text-center lg:text-left lg:ml-6">
