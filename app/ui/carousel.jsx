@@ -19,27 +19,29 @@ const ImageCarousel = () => {
 
   const ref = React.useRef();
  
-  return (
-    <ResponsiveContainer
-      carouselRef={ref}
-      render={(parentWidth, carouselRef) => {
-        let currentVisibleSlide = 3;
-        if (parentWidth <= 1440) currentVisibleSlide = 3;
-        else if (parentWidth <= 1080) currentVisibleSlide = 1;
-        return (
-          <StackedCarousel
-            ref={carouselRef}
-            data={data}
-            carouselWidth={parentWidth}
-            slideWidth={350}
-            slideComponent={Slide}
-            maxVisibleSlide={3}
-            currentVisibleSlide={currentVisibleSlide}
-            useGrabCursor={true}
-          />
-        );
-      }}
-    />
+  return (  
+    <section className="bg-zinc-200 py-20">
+      <ResponsiveContainer
+        carouselRef={ref}
+        render={(parentWidth, carouselRef) => {
+          let currentVisibleSlide = 3;
+          if (parentWidth <= 1440) currentVisibleSlide = 3;
+          else if (parentWidth <= 1080) currentVisibleSlide = 1;
+          return (
+            <StackedCarousel
+              ref={carouselRef}
+              data={data}
+              carouselWidth={parentWidth}
+              slideWidth={350}
+              slideComponent={Slide}
+              maxVisibleSlide={3}
+              currentVisibleSlide={currentVisibleSlide}
+              useGrabCursor={true}
+            />
+          );
+        }}
+      />
+    </section>
   );
 };
 

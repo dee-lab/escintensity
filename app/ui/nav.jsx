@@ -17,7 +17,7 @@ const NavBar = () => {
         <ul className="flex justify-end items-center list-none m-0 px-0">
             {NAVITEMS.map((navItem, index) => {
                 return (
-                <li key={index} className="uppercase py-3.5 px-4 no-underline hover:bg-esc-red hover:cursor-pointer">
+                <li key={index} className="uppercase py-3.5 px-4 no-underline hover:bg-red-800 hover:cursor-pointer">
                     <a href={navItem.link}>{navItem.label}</a>
                 </li>
                 )            
