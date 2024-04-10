@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import BurgerMenuIcon from './components/burger-menu';
 
 
@@ -32,21 +31,18 @@ const NavItems = () => {
 
 const styles = {navClasses: 'bg-zinc-950 text-white sticky top-0 z-10'}
 
-const NavBar = () => {
-  
-  return (
-    <div className='relative'>      
-      <div className={`${styles.navClasses} h-9 lg:hidden`}>
-        <BurgerMenuIcon />
-        <aside className='sidebar'>
-          <NavItems />
-        </aside>
-      </div>
-      <div className={`${styles.navClasses} hidden lg:block`}>
-        <NavItems/>
-      </div>
+const NavBar = () => (
+  <>      
+    <div className={`${styles.navClasses} h-12 lg:hidden`}>
+      <BurgerMenuIcon />
+      <aside className='sidebar'>
+        <NavItems />
+      </aside>
     </div>
-  )
-}
+    <div className={`${styles.navClasses} hidden lg:block`}>
+      <NavItems/>
+    </div>
+  </>
+);
 
 export default NavBar;
