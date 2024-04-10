@@ -33,7 +33,7 @@ const styles = {navClasses: 'bg-zinc-950 text-white sticky top-0 z-10'}
 
 const NavBar = () => (
   <>      
-    <div className={`${styles.navClasses} h-12 lg:hidden`}>
+    <div className={`${styles.navClasses} h-11 lg:hidden`}>
       <BurgerMenuIcon />
       <aside className='sidebar'>
         <NavItems />
