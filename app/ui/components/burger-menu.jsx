@@ -1,9 +1,12 @@
 import './burger-menu.css';
 
-const BurgerMenuIcon = () => (
-  <label className="burger-menu">
-    <input type="checkbox" />
-  </label>
-);	
+const BurgerMenuIcon = () => {
+
+  return (
+    <label className="burger-menu">
+      <input type="checkbox" />
+    </label>
+  );	
+}
 
 export default BurgerMenuIcon;

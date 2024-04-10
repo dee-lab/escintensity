@@ -1,9 +1,10 @@
 :root {
-  --bar-width: 60px;
-  --bar-height: 8px;
-  --burger-gap: 6px;
+  --bar-width: 1.875rem;
+  --bar-height: 0.188rem;
+  --burger-gap: 0.375rem;
   --burger-margin: 8px;
   --foreground: white;
+  --background: black;
   --animation-timing: 200ms ease-in-out;
   --burger-height: calc(var(--bar-height)*3 + var(--burger-gap)*2);
 }
@@ -17,10 +18,17 @@
   width: max-content;
   position: absolute;
   top: var(--burger-margin);
-  left: var(--burger-margin);
+  right: var(--burger-margin);
   z-index: 2;
   cursor: pointer;
 }
+
+/* .burger-menu:has(input:focus-visible)::before,
+.burger-menu:has(input:focus-visible)::after,
+.burger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+} */
 
 .burger-menu::before,
 .burger-menu::after,
@@ -40,7 +48,6 @@
   margin: 0;
   outline: none;
   pointer-events: none;
-
 }
 
 .burger-menu:has(input:checked)::before {
@@ -58,4 +65,18 @@
 .burger-menu input:checked {
   opacity: 0;
   width: 0;
+}
+
+.sidebar {
+  transition: translate var(--animation-timing);
+  translate: -100%;
+  background-color: var(--background);
+  padding: 0.5rem 1rem;
+  padding-top: calc(var(--burger-height) + var(--burger-margin) + 1rem);
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+.burger-menu:has(input:checked) + .sidebar {
+  translate: 0;
 }
