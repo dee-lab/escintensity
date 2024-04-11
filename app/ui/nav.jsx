@@ -31,18 +31,21 @@ const NavItems = () => {
 
 const styles = {navClasses: 'bg-zinc-950 text-white sticky top-0 z-10'}
 
-const NavBar = () => (
-  <>      
-    <div className={`${styles.navClasses} h-11 lg:hidden`}>
-      <BurgerMenuIcon />
-      <aside className='sidebar'>
-        <NavItems />
-      </aside>
-    </div>
-    <div className={`${styles.navClasses} hidden lg:block`}>
-      <NavItems/>
-    </div>
-  </>
-);
+const NavBar = () => {
+
+  return (
+    <>
+      <div className={`navbar ${styles.navClasses} h-11 lg:hidden`}>
+        <BurgerMenuIcon />
+        <section className='navScreen'>
+          <NavItems />
+        </section>
+      </div>
+      <div className={`${styles.navClasses} hidden lg:block`}>
+        <NavItems/>
+      </div>
+    </>
+  )  
+};
 
 export default NavBar;

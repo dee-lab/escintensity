@@ -67,16 +67,15 @@
   width: 0;
 }
 
-.sidebar {
-  transition: translate var(--animation-timing);
-  translate: -100%;
+.burger-menu:has(input:checked) + .navScreen {
+  opacity: 0.9;
+}
+
+.navScreen {
+  transition: opacity var(--animation-timing);
+  opacity: 0;
   background-color: var(--background);
   padding: 0.5rem 1rem;
   padding-top: calc(var(--burger-height) + var(--burger-margin) + 1rem);
   min-height: 100vh;
-  overflow-y: hidden;
-}
-
-.burger-menu:has(input:checked) + .sidebar {
-  translate: 0;
 }
