@@ -3,17 +3,17 @@ import Image from "next/image";
 const Trainers = () => {
   return (
     <div className="bg-zinc-300 py-20">
-      <section className="bg-zinc-900 text-white rounded-3xl flex flex-col-reverse lg:flex-row justify-center items-center ms-auto me-auto" style={{width:'calc(100% - 5% - 5%)'}}>
-      <Image
-        className="img-trainers p-4 rounded-3xl mb-6 lg:mb-0" 
-        src="/esc-trainers.png" 
-        width={450} 
-        height={450} 
-        alt="ESC Trainers, Joel and Craig standing side by side" />
-      <div className="flex flex-col text-center m-6 lg:mt-0">
-        <h2 className="text-5xl my-5">Unleash Your Confidence & Transform Your Body</h2>
-        <h3 className="text-4xl my-5">West London&apos;s Online Coaches</h3>
-      </div>
+      <section className="bg-zinc-900 text-white rounded-3xl flex flex-col-reverse lg:flex-row items-center justify-center ms-auto me-auto max-w-[80%]">
+        <Image
+          className="rounded-3xl grow shrink basis-1/3 md:w-full px-8 pb-8 lg:p-8" 
+          src="/esc-trainers.png" 
+          width={450} 
+          height={450} 
+          alt="ESC Trainers, Joel and Craig standing side by side" />
+        <div className="grow shrink basis-2/3 text-center px-4 py-8 lg:p-0">
+          <h2 className="text-2xl md:text-5xl m-2 lg:m-6 pb-4">Unleash Your Confidence & Transform Your Body</h2>
+          <h3 className="text-lg md:text-4xl m-2 lg:m-6">West London&apos;s Online Coaches</h3>
+        </div>
       </section>
     </div>
   )
