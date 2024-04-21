@@ -1,22 +1,23 @@
 "use client"
 
-import NavBar from "./ui/nav";
 import Header from "./ui/header";
 import Trainer from "./ui/trainers";
-import ImageCarousel from "./ui/carousel";
+import ClientResults from "./ui/client-results";
 import Sponsorship from "./ui/sponsorship";
-import Subscribe from "./ui/subscribe";
+import Services from "./ui/services";
+import Contact from "./ui/contact";
 import Footer from "./ui/footer";
 
 export default function Home() {
   return (
-    <>  
-      <NavBar />
+    <> 
       <main>
         <Header />
         <div>
+          <Services />
+          <Contact />
+          <ClientResults />
           <Trainer/>
-          <ImageCarousel />
           <Sponsorship />
           <Footer />
         </div>
