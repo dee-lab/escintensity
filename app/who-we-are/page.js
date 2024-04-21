@@ -1,11 +1,11 @@
 'use client'
 
+import Coaches from "./sections/coaches";
+
 export default function WhoWeAre() {
   return (
-    <>
-      <main>
-        <section>Who we are</section>
-      </main>
-    </>
+    <main>
+      <Coaches />
+    </main>
   )
 }

@@ -11,7 +11,7 @@ const NAVITEMS = [
   {"label": "Services", "link": "./services"},
   {"label": "Who we are", "link": "./who-we-are"},
   {"label": "Testimonials", "link": "./testimonials"},     
-  {"label": "Contact", "link": "./contact"},  
+  {"label": "Get in touch", "link": "./get-in-touch"},  
   // {"label": "Free Downloads", "link": "./downloads"},
   // {"label": "Merch", "link": "./merch"},
   // {"label": "Podcast", "link": "./podcast"},

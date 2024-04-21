@@ -1,11 +1,11 @@
 'use client'
 
-export default function Services() {
+import Services from "./sections/services";
+
+export default function OurServices() {
   return (
-    <>
-      <main>
-        <section>Services</section>
-      </main>
-    </>
+    <main>
+      <Services />
+    </main>
   )
 }

@@ -6,7 +6,6 @@ import ClientResults from "./ui/sections/client-results";
 import Sponsorship from "./ui/sections/sponsorship";
 import Services from "./ui/sections/services";
 import Contact from "./ui/sections/contact";
-import Footer from "./ui/global/footer";
 
 export default function Home() {
   return (
