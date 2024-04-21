@@ -10,7 +10,7 @@ const Signup = ({label, buttonText}) => (
         <input className="shadow border border-solid border-gray-300 rounded py-2 px-3 text-gray-700 leading-tight focus:ring-4 focus:ring-zinc-500" type="email" placeholder='Enter your email' required />
       </Form.Control>
       <Form.Submit asChild>
-        <Button type="secondary" size="sm">
+        <Button type="teritary" size="sm">
           <span>{buttonText}</span>
           <span className="material-symbols-outlined w-6 h-6" fill="currentColor" aria-hidden="true" data-slot="icon" >
             navigate_next
