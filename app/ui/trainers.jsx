@@ -13,7 +13,7 @@ const Trainers = () => {
           alt="ESC Trainers, Joel and Craig standing side by side" />
         <div className="grow shrink basis-2/3 flex flex-col align-center text-center px-4 py-8 lg:p-0 lg:pr-8">
           <h2 className="text-2xl md:text-5xl m-2 lg:m-6 pb-4">Unleash Your Confidence & Transform Your Body</h2>
-          <h3 className="text-lg md:text-4xl m-2 lg:m-6">West London&apos;s Online Coaches</h3>
+          <h3 className="text-lg md:text-4xl m-2 lg:m-6 uppercase">West London&apos;s Online Coaches</h3>
           <Button className="mt-12 mb-8" type="secondary" size="md">
             <span>Find out more</span>
           </Button>

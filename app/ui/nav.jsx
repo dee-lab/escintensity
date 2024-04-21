@@ -72,7 +72,7 @@ const NavItems = () => {
   )
 };
 
-const styles = {navClasses: 'bg-zinc-900 text-white sticky top-0 z-10'}
+const styles = {navClasses: 'bg-zinc-950 text-white sticky top-0 z-10'}
 
 const NavBar = () => {
 
