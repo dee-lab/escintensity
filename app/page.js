@@ -1,12 +1,12 @@
 "use client"
 
-import Header from "./ui/header";
-import Trainer from "./ui/trainers";
-import ClientResults from "./ui/client-results";
-import Sponsorship from "./ui/sponsorship";
-import Services from "./ui/services";
-import Contact from "./ui/contact";
-import Footer from "./ui/footer";
+import Header from "./ui/sections/header";
+import Trainer from "./ui/sections/trainers";
+import ClientResults from "./ui/sections/client-results";
+import Sponsorship from "./ui/sections/sponsorship";
+import Services from "./ui/sections/services";
+import Contact from "./ui/sections/contact";
+import Footer from "./ui/global/footer";
 
 export default function Home() {
   return (
@@ -19,7 +19,6 @@ export default function Home() {
           <ClientResults />
           <Trainer/>
           <Sponsorship />
-          <Footer />
         </div>
       </main>
     </>

@@ -1,11 +1,15 @@
 'use client'
 
+import TrainingStyle from "./sections/training-style";
+import FAQ from "./sections/faq";
+import FitnessGoal from "./sections/fitness-goal";
+
 export default function WhatToExpect() {
   return (
-    <>
-      <main>
-        <section>What to expect</section>
-      </main>
-    </>
+  <main>
+    <TrainingStyle />
+    <FitnessGoal />
+    <FAQ />
+  </main>
   )
 }

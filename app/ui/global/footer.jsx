@@ -1,5 +1,7 @@
-import Signup from './components/sign-up-form';
-import Socials from './components/socials';
+'use client'
+
+import Signup from '../components/sign-up-form';
+import Socials from '../components/socials';
 
 const Footer = () => {
   return (

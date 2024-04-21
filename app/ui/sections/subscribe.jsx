@@ -1,4 +1,4 @@
-import {Input} from './components/sign-up-form'
+import {Input} from '../components/sign-up-form'
 
 const Subscribe = () => {
   return (

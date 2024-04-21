@@ -2,7 +2,7 @@
 
 import {useEffect} from "react";
 
-import BurgerMenuIcon from './components/burger-menu';
+import BurgerMenuIcon from '../components/burger-menu';
 
 
 const NAVITEMS = [
