@@ -6,22 +6,16 @@ export const type = {
 }
 
 export const size = {
-  sm: 'text-sm',
-  md: 'text-base', 
+  sm: 'text-sm px-6 py-1',
+  md: 'text-base px-6 py-3', 
 }
 
 const button = tv({
   base: 'font-medium rounded-full px-5 py-2.5 focus:ring-4 cursor-pointer flex items-center justify-center',
   variants: {
-    color: type,
+    type: type,
     size: size,
   },
-  compoundVariants: [
-    {
-      size: ['sm', 'md'],
-      class: 'px-3 py-1'
-    }
-  ],
   defaultVariants: {
     color: 'primary',
     size: 'md',    
