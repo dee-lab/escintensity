@@ -8,18 +8,15 @@ const Sponsorship = () => {
         <Image src="/logo-liberty-supplements.png" 
           width={200} 
           height={200}
-          alt="Liberty Supplements logo" 
-          className="image" />
+          alt="Liberty Supplements logo" />
         <Image src="/logo-power-stone.png" 
           width={200} 
           height={200}
-          alt="Powerstone logo" 
-          className="image" />
+          alt="Powerstone logo" />
         <Image src="/logo-source-performance.png" 
           width={200} 
           height={200}
-          alt="Source Performance logo" 
-          className="image" />
+          alt="Source Performance logo" />
       </div> 
     </section> 
   )
