@@ -5,7 +5,7 @@ import Socials from '../components/socials';
 
 const Footer = () => {
   return (
-   <footer className='flex flex-col md:flex-row justify-around md:items-end bg-zinc-950 p-9 px-10 lg:px-40 text-white'>
+   <footer className='flex flex-col md:flex-row justify-around md:items-end bg-zinc-950 p-9  text-white'>
     <Signup label={"Be part of the ESC community:"} buttonText={"Sign up"} /> 
     <div className='flex flex-col flex-nowrap md:items-end gap-2'>
       <Socials />
