@@ -2,7 +2,7 @@ import { Button } from '../components/button';
 
 const ContactSection = () => {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-neutral-50 py-16">
       <div className="flex flex-col text-zinc-900 text-center items-center gap-8 ms-auto me-auto max-w-[80%]">
         <h3 className="text-4xl my-5">Do you dream of a healthier, stronger you but lack the guidance to get there?</h3>
         <Button type="primary" size="md">

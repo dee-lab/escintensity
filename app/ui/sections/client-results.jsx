@@ -17,7 +17,7 @@ const Slide = React.memo(function slide(props) {
   const { cover } = data[dataIndex];
 
   return (
-    <div className='bg-white rounded-xl'>
+    <div className='bg-neutral-50 rounded-xl'>
       <Image
         src={cover}
         draggable={false}

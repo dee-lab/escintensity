@@ -2,7 +2,7 @@ import Accordion from "../../ui/components/accordion";
 
 const FAQ = () => {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-neutral-50 py-16">
       <div className="flex flex-col text-zinc-900 items-center gap-8 ms-auto me-auto max-w-[80%]">
         <h3 className="text-4xl my-5 uppercase text-center">Frequently asked questions</h3>
         <div className="w-full">
