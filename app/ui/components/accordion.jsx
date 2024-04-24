@@ -10,7 +10,7 @@ const Accordion = (props) => {
   };
 
   return (
-    <div className="border border-zinc-600 rounded-md w-full my-4 py-4  bg-zinc-100 text-left hover:cursor-pointer">
+    <div className="border border-zinc-200 rounded-md w-full my-4 py-4  bg-zinc-100 text-left hover:cursor-pointer">
       <button
         type="button"
         isOpen={isOpen}
