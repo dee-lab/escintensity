@@ -1,9 +1,8 @@
 'use client'
 
-import Header from "./sections/header";
-import ClientTestimonials from "./sections/client-testimonials";
+import {ClientTestimonials, Header} from "./sections";
 
-export default function Testimonials() {
+export default function TestimonialsPage() {
   return (
     <main>
       <Header />

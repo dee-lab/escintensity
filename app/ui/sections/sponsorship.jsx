@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Sponsorship = () => {
+const SponsorshipSection = () => {
   return (
     <section className="bg-zinc-900 pt-12 pb-14 flex flex-col gap-8">
       <h3 className="text-4xl text-center text-white my-4 uppercase">Sponsors</h3>
@@ -22,4 +22,4 @@ const Sponsorship = () => {
   )
 }
 
-export default Sponsorship;
+export default SponsorshipSection;

@@ -1,4 +1,4 @@
-const Services = () => {
+const OurServicesSection = () => {
   return (
     <section className="bg-zinc-900 py-20 [&_h3]:uppercase">
       <h2 className="text-5xl text-center text-white pb-8 uppercase">Our Services</h2>
@@ -31,4 +31,4 @@ const Services = () => {
   )
 }
 
-export default Services;
+export default OurServicesSection;

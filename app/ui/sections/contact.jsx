@@ -1,6 +1,6 @@
 import { Button } from '../components/button';
 
-const Contact = () => {
+const ContactSection = () => {
   return (
     <section className="bg-white py-16">
       <div className="flex flex-col text-zinc-900 text-center items-center gap-8 ms-auto me-auto max-w-[80%]">
@@ -13,4 +13,4 @@ const Contact = () => {
   )
 }
 
-export default Contact;
+export default ContactSection;

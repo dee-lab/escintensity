@@ -30,7 +30,7 @@ const Slide = React.memo(function slide(props) {
   );
 });
 
-const ClientResults = () => {
+const ClientResultsSection = () => {
   return (
    <section className="bg-zinc-900 py-20">
      <ImageCarousel slide={Slide} data={data}/>
@@ -38,4 +38,4 @@ const ClientResults = () => {
   )
  }
 
-export default ClientResults;
+export default ClientResultsSection;
