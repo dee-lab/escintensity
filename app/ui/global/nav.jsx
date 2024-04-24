@@ -6,15 +6,15 @@ import BurgerMenuIcon from '../components/burger-menu';
 
 
 const NAVITEMS = [
-  {"label": "Home", "link": "/",},
-  {"label": "What to expect", "link": "./what-to-expect"},
-  {"label": "Services", "link": "./services"},
-  {"label": "Who we are", "link": "./who-we-are"},
-  {"label": "Testimonials", "link": "./testimonials"},     
-  {"label": "Get in touch", "link": "./get-in-touch"},  
-  // {"label": "Free Downloads", "link": "./downloads"},
-  // {"label": "Merch", "link": "./merch"},
-  // {"label": "Podcast", "link": "./podcast"},
+  {label: "Home", link: "/",},
+  {label: "What to expect", link: "./what-to-expect"},
+  {label: "Services", link: "./services"},
+  {label: "Who we are", link: "./who-we-are"},
+  {label: "Testimonials", link: "./testimonials"},     
+  {label: "Get in touch", link: "./get-in-touch"},  
+  // {label: "Free Downloads", link: "./downloads"},
+  // {label: "Merch", link: "./merch"},
+  // {label: "Podcast", link: "./podcast"},
 ];
 
 const NavItems = () => {
