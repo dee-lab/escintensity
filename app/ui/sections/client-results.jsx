@@ -21,7 +21,7 @@ const Slide = React.memo(function slide(props) {
       <Image
         src={cover}
         draggable={false}
-        alt={`Transformational before and after picture`} 
+        alt="Transformational before and after picture" 
         height={300}
         width={300} 
         className='m-2 inline-block'

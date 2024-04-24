@@ -1,11 +1,13 @@
 'use client'
 
-import Feedback from "./sections/feedback";
+import Header from "./sections/header";
+import ClientTestimonials from "./sections/client-testimonials";
 
 export default function Testimonials() {
   return (
     <main>
-      <Feedback />
+      <Header />
+      <ClientTestimonials />
     </main>
   )
 }

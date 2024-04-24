@@ -1,11 +1,11 @@
 'use client'
 
-import GetInTouch from "./sections/get-in-touch";
+import Header from "./sections/header";
 
 export default function Contact() {
   return (
     <main>
-      <GetInTouch />
+      <Header />
     </main>
   )
 }

@@ -1,11 +1,11 @@
 'use client'
 
-import Services from "./sections/services";
+import Header from "./sections/header";
 
 export default function OurServices() {
   return (
     <main>
-      <Services />
+      <Header />
     </main>
   )
 }

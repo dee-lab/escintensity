@@ -63,7 +63,7 @@ const NavItems = () => {
         {NAVITEMS.map((navItem, index) => {
           return (
           <li key={index} className="uppercase py-3.5 px-4 no-underline hover:bg-red-800 hover:cursor-pointer active:bg-red-800">
-              <a href={navItem.link}>{navItem.label}</a>
+            <a href={navItem.link}>{navItem.label}</a>
           </li>
           )            
         })}
