@@ -23,13 +23,6 @@
   cursor: pointer;
 }
 
-/* .burger-menu:has(input:focus-visible)::before,
-.burger-menu:has(input:focus-visible)::after,
-.burger-menu input:focus-visible {
-  border: 1px solid var(--background);
-  box-shadow: 0 0 0 1px var(--foreground);
-} */
-
 .burger-menu::before,
 .burger-menu::after,
 .burger-menu input {
@@ -68,10 +61,12 @@
 }
 
 .burger-menu:has(input:checked) + .navScreen {
-  opacity: 0.9;
+  opacity: 0.95;
+  display: block;
 }
 
 .navScreen {
+  display: none;
   transition: opacity var(--animation-timing);
   opacity: 0;
   background-color: var(--background);
