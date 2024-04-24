@@ -12,7 +12,7 @@ export const size = {
 }
 
 const button = tv({
-  base: 'font-medium rounded-full px-5 py-2.5 focus:ring-4 cursor-pointer flex items-center justify-center',
+  base: 'font-medium rounded-lg px-5 py-2.5 focus:ring-4 cursor-pointer flex items-center justify-center',
   variants: {
     type: type,
     size: size,
