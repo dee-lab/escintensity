@@ -5,21 +5,24 @@ import CLIENTS from "./client-data";
 
 const ClientTestimonials = () => {
   return (
-    <section className="bg-white py-16">
+    <>
       {CLIENTS.map((client, index) => {
         return ( 
-          <section key={index} className="flex flex-wrap *:grow *:shrink *:basis-1/2 gap-4 *:text-center *:p-2 *:max-w-96 *:min-w-96">
+          <section key={index} className="bg-white flex flex-col md:flex-row md:odd:flex-row-reverse justify-center items-center gap-8 py-8 odd:bg-zinc-100 text-justify *:grow *:shrink *:basis-1/2 *:max-w-96 *:min-w-96">
             <Image
               src={client.image}
               alt={`Client testimonial from ${client.name}`}
               height={300}
               width={300}
             />
-            <p>{client.testimonial}</p>
+            <div>
+              <q className="italic">{client.testimonial}</q>
+              <p className="pt-2 font-semibold">{client.name}</p>
+            </div>
           </section>
         )
       })}
-    </section>
+    </>
   )
 }
 
