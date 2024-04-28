@@ -62,7 +62,7 @@ const NavItems = () => {
       <ul className="flex flex-col lg:flex-row lg:justify-end lg:items-center list-none m-0 px-0">
         {NAVITEMS.map((navItem, index) => {
           return (
-          <li key={index} className="uppercase py-3.5 px-4 no-underline hover:bg-red-800 hover:cursor-pointer active:bg-red-800">
+          <li key={index} className="uppercase py-4 px-4 no-underline hover:bg-red-800 hover:cursor-pointer active:bg-red-800">
             <a href={navItem.link}>{navItem.label}</a>
           </li>
           )            
@@ -78,7 +78,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className={`navbar ${styles.navClasses} h-11 lg:hidden`}>
+      <div className={`navbar ${styles.navClasses} h-14 lg:hidden`}>
         <BurgerMenuIcon />
         <section className='navScreen'>
           <NavItems />
