@@ -5,7 +5,7 @@ import CoachSection from "./ui/sections/coaches";
 import ClientResultsSection from "./ui/sections/client-results";
 import SponsorshipSection from "./ui/sections/sponsorship";
 import OurServicesSection from "./ui/sections/our-services";
-import ContactSection from "./ui/sections/contact";
+import StartSection from "./ui/sections/start";
 
 export default function HomePage() {
   return (
@@ -14,7 +14,7 @@ export default function HomePage() {
         <Header />
         <div>
           <OurServicesSection />
-          <ContactSection />
+          <StartSection />
           <ClientResultsSection />
           <CoachSection/>
           <SponsorshipSection />

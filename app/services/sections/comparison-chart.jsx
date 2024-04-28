@@ -7,7 +7,7 @@ const ComparisonTable = () => {
       <div key={service} className="service-grid__item grid grid-cols-5 gap-2 *:py-6 *:border-b-2 *:border-zinc-200 *:flex *:flex-wrap md:*:flex-nowrap">
         <span className="text-gray-700 text-xs md:text-sm lg:text-base flex justify-between items-center">
           {service}
-          <span class="material-symbols-outlined"> info </span>
+          {/* <span class="material-symbols-outlined"> info </span> */}
         </span>       
         <span className="justify-center">
           {community ? (

@@ -1,6 +1,7 @@
 'use client'
 
 import {useEffect} from "react";
+import Link from 'next/link'
 
 import BurgerMenuIcon from '../../components/burger-menu';
 
@@ -63,7 +64,7 @@ const NavItems = () => {
         {NAVITEMS.map((navItem, index) => {
           return (
           <li key={index} className="uppercase py-4 px-4 no-underline hover:bg-red-800 hover:cursor-pointer active:bg-red-800">
-            <a href={navItem.link}>{navItem.label}</a>
+            <Link href={navItem.link}>{navItem.label}</Link>
           </li>
           )            
         })}
