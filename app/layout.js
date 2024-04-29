@@ -9,13 +9,13 @@ const kanit = Kanit({
 
 export const metadata = {
   title: "ESC Intensity",
-  description: "Blurb here",
+  description: "West London Online Coaches",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={kanit.className}>
+      <body className={kanit.className} style={{backgroundColor: "#18181b"}}>
         {children}
       </body>
     </html>

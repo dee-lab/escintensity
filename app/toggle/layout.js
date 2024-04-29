@@ -17,7 +17,7 @@ const kanit = Kanit({
 
 export const metadata = {
   title: "ESC Intensity",
-  description: "Blurb here",
+  description: "West London Online Coaches",
 };
 
 export default function RootLayout({ children }) {

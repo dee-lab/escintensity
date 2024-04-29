@@ -21,7 +21,8 @@
 
 
 :root {
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
+  background-color: #18181b;
 }
 
 @layer utilities {
