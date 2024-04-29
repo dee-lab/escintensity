@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function WaitList() {
   return (
     <> 
-      <main style={{display: "flex", justifyContent: "center", alignContent: "center", flexDirection: "column", alignItems: "center", color: "white", textTransform: "uppercase", letterSpacing: ".2rem", textAlign: "center"}}>
+      <main style={{display: "flex", justifyContent: "center", alignContent: "center", flexDirection: "column", alignItems: "center", color: "white", textTransform: "uppercase", letterSpacing: ".2rem", textAlign: "center", paddingTop: "48px"}}>
         
         <h1>ESC Community Wait List</h1>
         <h2>coming soon</h2>
