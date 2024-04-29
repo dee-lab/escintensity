@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from "next/image";
-import ImageCarousel from "../components/carousel";
+import ImageCarousel from "../ui/components/carousel";
 
 const data = [
   {cover: "/slider/image-1.png", title: "image 1"},
