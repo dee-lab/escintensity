@@ -1,10 +1,11 @@
 'use client'
 
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Image from "next/image";
 import Link from 'next/link'
 
 import BurgerMenuIcon from '../toggle/ui/components/burger-menu';
+import styles from "./styles";
 
 const NAVITEMS = [
   {label: "Home", link: "/toggle",},
@@ -25,62 +26,55 @@ const NAVITEMS = [
   // {label: "Podcast", link: "./podcast"},
 ];
 
-
 const NavItems = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleMouseEnter = (event) => {
-    event.stopPropagation();
-    setIsActive(true)    
+  const handleClick = () => {
+    setIsOpen(!isOpen);
   };
-  const handleMouseLeave = () => setIsActive(false);
 
   const renderNavItem = (item) => {
     if (item.children) {
       return (
-        <li key={item.label} className="dropdown uppercase py-4 px-4 no-underline hover:bg-red-800 hover:cursor-pointer active:bg-red-800">
-          <button 
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            aria-expanded={isActive}
-          >
+        <li key={item.label} className={`dropdown ${styles.navItem} relative inline-block`}>
+          <button className="dropbtn flex items-center justify-between" onClick={handleClick} isOpen={isOpen}aria-haspopup="true" aria-expanded={isOpen}>
             {item.label}
+            <span className={`material-symbols-outlined ${ isOpen ? '-rotate-180' : '-rotate-0' }`}>
+              expand_more
+            </span>
           </button>
-          {isActive && (
-            <ul className="dropdown-content">
-              {item.children.map((child) => (
-                <li key={child.label}>
-                  <Link href={child.link}>{child.label}</Link>
-                </li>
-              ))}
-            </ul>
-          )}
+          <ul className={`${ isOpen ? 'inline-block md:absolute' : 'hidden'} dropdown-content top-14 left-0`} isOpen={isOpen} aria-hidden={!isOpen}>
+            {item.children.map((child) => (
+              <li key={child.label} className={`${styles.navItem} bg-zinc-950`}>
+                <Link href={child.link}>{child.label}</Link>
+              </li>
+            ))}
+          </ul>
         </li>
       );
     }
 
     return (
-      <li key={item.label} className="uppercase py-4 px-4 no-underline hover:bg-red-800 hover:cursor-pointer active:bg-red-800">
+      <li key={item.label} className={`${styles.navItem}`}>
         <Link href={item.link}>{item.label}</Link>
       </li>
     );
   };
 
+
   return (
     <nav>
-      <ul className="nav-list flex flex-col lg:flex-row lg:justify-end lg:items-center list-none m-0 px-0">
+      <ul className={`${styles.navList}`}>
         {NAVITEMS.map(renderNavItem)}
       </ul>
     </nav>
   );
 };
 
-const styles = {navClasses: 'bg-zinc-950 text-white sticky top-0 z-10'}
-
 const NavBar = () => {
 
   return (
-    <div className={`${styles.navClasses} flex justify-between items-center`}>
+    <div className={`${styles.navBar} flex justify-between items-center`}>
       <Image 
         src="/logo-white.png"
         width={60}
