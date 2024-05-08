@@ -15,8 +15,8 @@ const NAVITEMS = [
     label: "Who we are", 
     link: "./contact", 
     children: [
-      {label: "Coach Joel", link: "./coach/joel",},
-      {label: "Coach Craig", link: "./coach/craig"}
+      {label: "Coach Joel", link: "./joel",},
+      {label: "Coach Craig", link: "./craig"}
     ]
   },
   {label: "Testimonials", link: "./testimonials"},     
@@ -36,17 +36,17 @@ const NavItems = () => {
   const renderNavItem = (item) => {
     if (item.children) {
       return (
-        <li key={item.label} className={`dropdown ${styles.navItem} relative inline-block`}>
-          <button className="dropbtn flex items-center justify-between" onClick={handleClick} isOpen={isOpen}aria-haspopup="true" aria-expanded={isOpen}>
+        <li key={item.label} className={`dropdown ${styles.navItem} relative inline-block focus:outline-none focus-visible:ring`}>
+          <button className="dropbtn flex items-center justify-between py-4 px-4" onClick={handleClick} isOpen={isOpen}aria-haspopup="true" aria-expanded={isOpen}>
             {item.label}
             <span className={`material-symbols-outlined ${ isOpen ? '-rotate-180' : '-rotate-0' }`}>
               expand_more
             </span>
           </button>
-          <ul className={`${ isOpen ? 'inline-block md:absolute' : 'hidden'} dropdown-content top-14 left-0`} isOpen={isOpen} aria-hidden={!isOpen}>
+          <ul className={`${ isOpen ? 'inline-block md:absolute' : 'hidden'} dropdown-content top-14 left-0 w-full`} isOpen={isOpen} aria-hidden={!isOpen}>
             {item.children.map((child) => (
-              <li key={child.label} className={`${styles.navItem} bg-zinc-950`}>
-                <Link href={child.link}>{child.label}</Link>
+              <li key={child.label} className={`${styles.navItem} bg-zinc-950 py-4`}>
+                <Link href={child.link} className={`${styles.navLink}`}>{child.label}</Link>
               </li>
             ))}
           </ul>
@@ -56,7 +56,7 @@ const NavItems = () => {
 
     return (
       <li key={item.label} className={`${styles.navItem}`}>
-        <Link href={item.link}>{item.label}</Link>
+        <Link href={item.link} className={`${styles.navLink}`}>{item.label}</Link>
       </li>
     );
   };
