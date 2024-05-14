@@ -1,6 +1,6 @@
 'use client'
 
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import Image from "next/image";
 import Link from 'next/link'
 
@@ -27,29 +27,38 @@ const NAVITEMS = [
 ];
 
 const NavItems = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
-  const handleClick = () => {
-    setIsOpen(!isOpen);
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setDropdownOpen(false);
+    }
   };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []); // Cleanup on unmount
+
 
   const renderNavItem = (item) => {
     if (item.children) {
       return (
-        <li key={item.label} className={`dropdown ${styles.navItem} relative inline-block focus:outline-none focus-visible:ring`}>
-          <button className="dropbtn flex items-center justify-between py-4 px-4" onClick={handleClick} isOpen={isOpen}aria-haspopup="true" aria-expanded={isOpen}>
+        <li key={item.label} ref={dropdownRef} className={`${styles.navItem} relative inline-block focus:outline-none focus-visible:ring ${ dropdownOpen ? 'bg-red-800' : 'bg-zinc-950'}`}>
+          <button className="dropbtn flex items-center justify-between py-4 px-4" onClick={() => setDropdownOpen(true)} dropdownOpen={dropdownOpen} aria-haspopup="true" aria-expanded={dropdownOpen}>
             {item.label}
-            <span className={`material-symbols-outlined ${ isOpen ? '-rotate-180' : '-rotate-0' }`}>
+            <span className={`material-symbols-outlined ${ dropdownOpen ? '-rotate-180' : '-rotate-0' }`}>
               expand_more
             </span>
           </button>
-          <ul className={`${ isOpen ? 'inline-block md:absolute' : 'hidden'} dropdown-content top-14 left-0 w-full`} isOpen={isOpen} aria-hidden={!isOpen}>
+          {dropdownOpen && (<ul className={`${ dropdownOpen ? 'inline-block md:absolute' : 'hidden'} dropdown-content top-14 left-0 w-full`} dropdownOpen={dropdownOpen} aria-hidden={!dropdownOpen}>
             {item.children.map((child) => (
               <li key={child.label} className={`${styles.navItem} bg-zinc-950 py-4`}>
                 <Link href={child.link} className={`${styles.navLink}`}>{child.label}</Link>
               </li>
             ))}
-          </ul>
+          </ul>)}
         </li>
       );
     }
