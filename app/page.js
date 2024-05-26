@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import { size } from "./toggle/ui/components/button";
 
 export default function LandingPage() {
   return (
