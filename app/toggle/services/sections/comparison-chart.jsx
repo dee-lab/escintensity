@@ -58,8 +58,8 @@ const ComparisonTable = () => {
   }
 
   return (
-    <section className="service-grid bg-neutral-50 grid grid-cols-1 gap-4 mb-8 py-16 max-w-[85%] ms-auto me-auto">
-      <div>
+    <section className="service-grid bg-neutral-50 grid grid-cols-1 gap-4 py-16">
+      <div className="max-w-[85%] ms-auto me-auto">
         <h3></h3>
         <div className="service-grid__header grid grid-cols-5 items-center gap-2 text-center text-gray-700 font-bold sticky top-14 py-6 bg-neutral-50 border-b-2 border-zinc-200 *:text-xs *:md:text-sm *:lg:text-base">
           <span></span>
