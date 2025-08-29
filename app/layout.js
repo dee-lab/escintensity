@@ -25,11 +25,10 @@ export default function RootLayout({ children }) {
 		<html lang='en'>
 			<body className={kanit.className}>
 				<Script
-					id='Cookiebot'
-					src='https://consent.cookiebot.com/uc.js'
-					data-cbid='010f9f87-8729-4866-b0d1-5380ba7052c7'
-					data-blockingmode='auto'
+					id='CookieDeclaration'
+					src='https://consent.cookiebot.com/010f9f87-8729-4866-b0d1-5380ba7052c7/cd.js'
 					strategy='beforeInteractive'
+					async
 				></Script>
 				<NavBar />
 				{children}
