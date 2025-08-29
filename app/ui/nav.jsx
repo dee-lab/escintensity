@@ -8,7 +8,6 @@ import BurgerMenuIcon from "./components/burger-menu";
 import styles from "./styles";
 
 const NAVITEMS = [
-	{ label: "Home", link: "/toggle" },
 	{ label: "What to expect", link: "./what-to-expect" },
 	{ label: "Services", link: "./services" },
 	{
@@ -112,20 +111,22 @@ const NavItems = () => {
 const NavBar = () => {
 	return (
 		<div className={`${styles.navBar} flex justify-between items-center`}>
-			<Image
-				src='/logo-white.png'
-				width={60}
-				height={60}
-				alt='ESC Intensity logo'
-				className='pl-2 block lg:hidden'
-			/>
-			<Image
-				src='/logo-white.png'
-				width={100}
-				height={100}
-				alt='ESC Intensity logo'
-				className='pl-2 hidden lg:block'
-			/>
+			<Link href='/'>
+				<Image
+					src='/logo-white.png'
+					width={60}
+					height={60}
+					alt='ESC Intensity logo'
+					className='pl-2 block lg:hidden'
+				/>
+				<Image
+					src='/logo-white.png'
+					width={100}
+					height={100}
+					alt='ESC Intensity logo'
+					className='pl-2 hidden lg:block'
+				/>
+			</Link>
 			<div className='navbar h-14 lg:hidden'>
 				<BurgerMenuIcon />
 				<section className='navScreen'>
