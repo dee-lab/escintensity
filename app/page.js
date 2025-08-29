@@ -1,18 +1,24 @@
 "use client"
-import Image from "next/image";
 
-export default function LandingPage() {
+import Header from "./sections/header";
+import CoachSection from "./sections/coaches";
+import ClientResultsSection from "./sections/client-results";
+import SponsorshipSection from "./sections/sponsorship";
+import OurServicesSection from "./sections/our-services";
+import StartSection from "./sections/start";
+
+export default function HomePage() {
   return (
     <> 
-      <main style={{display: "flex", justifyContent: "center", alignContent: "center", flexDirection: "column", alignItems: "center", color: "white", textTransform: "uppercase", letterSpacing: ".2rem", textAlign: "center"}}>
-      <Image 
-          src="/logo-white.png"
-          width={400}
-          height={400}
-          alt="ESC Intensity logo"
-        />
-        <div style={{fontSize:"1.5rem", paddingBottom: "24px"}}>West London Online Coaches</div>
-        <h1>🚧 Website under construction 🚧</h1>
+      <main>
+        <Header />
+        <div>
+          <OurServicesSection />
+          <StartSection />
+          <ClientResultsSection />
+          <CoachSection/>
+          <SponsorshipSection />
+        </div>
       </main>
     </>
   );
