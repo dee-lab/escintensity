@@ -23,16 +23,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<head>
+			<body className={kanit.className}>
 				<Script
 					id='Cookiebot'
 					src='https://consent.cookiebot.com/uc.js'
 					data-cbid='010f9f87-8729-4866-b0d1-5380ba7052c7'
 					data-blockingmode='auto'
-					type='text/javascript'
+					strategy='beforeInteractive'
 				></Script>
-			</head>
-			<body className={kanit.className}>
 				<NavBar />
 				{children}
 				<Footer />
