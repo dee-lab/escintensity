@@ -25,11 +25,12 @@ const NAVITEMS = [
 	// {label: "Podcast", link: "./podcast"},
 ];
 
-const NavItems = () => {
+const NavItems = ({ setIsChecked, isChecked }) => {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const dropdownRef = useRef(null);
 
 	const handleClickOutside = (event) => {
+		// If the dropdownRef exists and the click is NOT inside the dropdown
 		if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
 			setDropdownOpen(false);
 		}
@@ -48,12 +49,12 @@ const NavItems = () => {
 					ref={dropdownRef}
 					className={`${
 						styles.navItem
-					} relative inline-block focus:outline-none focus-visible:ring ${
+					} relative inline-block focus:outline-none focus-visible:ring text-center ${
 						dropdownOpen ? "bg-red-800" : "bg-zinc-950"
 					}`}
 				>
 					<button
-						className='dropbtn flex items-center justify-between py-4 px-4'
+						className='dropbtn flex align-middle items-center justify-between px-4'
 						onClick={() => setDropdownOpen(true)}
 						dropdownOpen={dropdownOpen}
 						aria-haspopup='true'
@@ -94,7 +95,11 @@ const NavItems = () => {
 
 		return (
 			<li key={item.label} className={`${styles.navItem}`}>
-				<Link href={item.link} className={`${styles.navLink}`}>
+				<Link
+					href={item.link}
+					className={`${styles.navLink}`}
+					onClick={() => setIsChecked(!isChecked)}
+				>
 					{item.label}
 				</Link>
 			</li>
@@ -109,6 +114,8 @@ const NavItems = () => {
 };
 
 const NavBar = () => {
+	const [isChecked, setIsChecked] = useState(false);
+
 	return (
 		<div className={`${styles.navBar} flex justify-between items-center`}>
 			<Link href='/'>
@@ -128,9 +135,9 @@ const NavBar = () => {
 				/>
 			</Link>
 			<div className='navbar h-14 lg:hidden'>
-				<BurgerMenuIcon />
-				<section className='navScreen'>
-					<NavItems />
+				<BurgerMenuIcon setIsChecked={setIsChecked} isChecked={isChecked} />
+				<section className='navScreen w-screen'>
+					<NavItems setIsChecked={setIsChecked} isChecked={isChecked} />
 				</section>
 			</div>
 			<div className='hidden lg:block'>
