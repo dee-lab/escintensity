@@ -106,7 +106,7 @@ export default function CoachJoel() {
 								<div className='flex flex-row justify-between items-center'>
 									<p>-- Ludwig A.</p>
 									<Image
-										src='/five-stars-white.png'
+										src='/five-stars.png'
 										width={143.5}
 										height={21}
 										alt='Five stars'
@@ -123,7 +123,7 @@ export default function CoachJoel() {
 								<div className='flex flex-row justify-between items-center'>
 									<p>-- Sarah King</p>
 									<Image
-										src='/five-stars-white.png'
+										src='/five-stars.png'
 										width={143.5}
 										height={21}
 										alt='Five stars'
