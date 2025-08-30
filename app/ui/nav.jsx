@@ -8,18 +8,18 @@ import BurgerMenuIcon from "./components/burger-menu";
 import styles from "./styles";
 
 const NAVITEMS = [
-	{ label: "What to expect", link: "./what-to-expect" },
-	{ label: "Services", link: "./services" },
+	{ label: "What to expect", link: "/what-to-expect" },
+	{ label: "Services", link: "/services" },
 	{
 		label: "Who we are",
-		link: "./coaches",
-		children: [
-			{ label: "Coach Joel", link: "./joel" },
-			{ label: "Coach Craig", link: "./craig" },
-		],
+		link: "/coaches",
+		// children: [
+		// 	{ label: "Coach Joel", link: "./joel" },
+		// 	{ label: "Coach Craig", link: "./craig" },
+		// ],
 	},
-	{ label: "Testimonials", link: "./testimonials" },
-	{ label: "Get in touch", link: "./contact" },
+	{ label: "Testimonials", link: "/testimonials" },
+	{ label: "Get in touch", link: "/contact" },
 	// {label: "Free Downloads", link: "./downloads"},
 	// {label: "Merch", link: "./merch"},
 	// {label: "Podcast", link: "./podcast"},
