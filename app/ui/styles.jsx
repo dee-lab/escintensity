@@ -3,7 +3,7 @@ const styles = {
 	navList:
 		"nav-list flex flex-col lg:flex-row lg:justify-end items-center list-none m-0 px-0",
 	navItem:
-		"nav-item uppercase no-underline hover:bg-red-800 hover:cursor-pointer py-4 lg:py-1 text-center w-full",
+		"nav-item uppercase no-underline hover:bg-red-800 hover:cursor-pointer py-4 lg:py-1 text-center w-full lg:w-auto",
 	navLink:
 		"uppercase no-underline hover:bg-red-800 hover:cursor-pointer py-4 px-4 ",
 	navDropdownLink:
