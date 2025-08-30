@@ -14,14 +14,14 @@ const Coaches = () => {
 							alt='An image of Joel, also known as Syxx, one of the coaches'
 						/>
 					</Link>
-					<Link href='coaches/craig'>
+					{/* <Link href='coaches/craig'>
 						<Image
 							src='/Craig.png'
 							width={350}
 							height={450}
 							alt='An image of Craig, one of the coaches'
 						/>
-					</Link>
+					</Link> */}
 				</div>
 			</div>
 		</section>
