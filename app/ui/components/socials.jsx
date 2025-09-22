@@ -2,22 +2,59 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Socials = () => {
-  return (
-    <section className="flex flex-nowrap justify-center py-8 md:py-0 gap-4">
-      {/* <Image
-        src="/Facebook_Logo.png"
-        width={29}
-        height={29}
-        alt="Facebook Logo" /> */}
-      <Link href="https://www.instagram.com/escintensity/">
-        <Image
-          src="/Instagram_Logo.png"
-          width={29}
-          height={29}
-          alt="Instagram Logo" />
-      </Link>
-    </section>
-  )
+	return (
+		<section className='flex flex-wrap justify-evenly [&>*]:py-8 [&>*]:px-20 md:[&>*]:px-12 lg:[&>*]:px-28 border-b-[0.25px] border-zinc-500'>
+			<Link
+				href='https://www.instagram.com/syxx.esccoaching/'
+				target='_blank'
+				className='hover:bg-red-800'
+			>
+				<Image
+					src='/Instagram_Logo.png'
+					width={50}
+					height={50}
+					alt='Instagram Logo'
+				/>
+			</Link>
+			<Link
+				href='https://www.tiktok.com/@syxx.esccoaching/'
+				target='_blank'
+				className='hover:bg-red-800'
+			>
+				<Image
+					src='/TikTok_Logo.png'
+					width={50}
+					height={50}
+					alt='TikTok Logo'
+				/>
+			</Link>
+
+			<Link
+				href='https://www.facebook.com/syxx.esccoaching/'
+				target='_blank'
+				className='hover:bg-red-800'
+			>
+				<Image
+					src='/Facebook_Logo.png'
+					width={50}
+					height={50}
+					alt='Facebook Logo'
+				/>
+			</Link>
+			<Link
+				href='https://www.youtube.com/@syxx.esccoaching/'
+				target='_blank'
+				className='hover:bg-red-800'
+			>
+				<Image
+					src='/YouTube_Logo.png'
+					width={50}
+					height={50}
+					alt='Youtube Logo'
+				/>
+			</Link>
+		</section>
+	);
 };
 
 export default Socials;

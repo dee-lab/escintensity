@@ -30,6 +30,7 @@ export default function RootLayout({ children }) {
 					strategy='beforeInteractive'
 					async
 				></Script>
+
 				<NavBar />
 				{children}
 				<Footer />

@@ -1,17 +1,18 @@
 "use client";
 
-import Signup from "./components/sign-up-form";
 import Socials from "./components/socials";
 
 const Footer = () => {
 	return (
-		<footer className='flex flex-col md:flex-row justify-around md:items-end bg-zinc-950 p-9 text-white'>
-			<Signup label={"Be part of the ESC community:"} buttonText={"Sign up"} />
-			<div className='flex flex-col flex-nowrap md:items-end gap-2'>
-				<Socials />
-				<div className='text-center md:text-left p-4 md:p-0 md:mt-0 border-t border-white/10 md:border-none'>
-					Copyright © 2024 ESC Intensity
-				</div>
+		<footer className=' bg-zinc-950 text-white flex flex-col px-4'>
+			<Socials />
+			<div className='text-center md:text-left py-11 px-9'>
+				<ul className='flex flex-row gap-8 items-start'>
+					<li>Copyright © 2025 ESC Coaching</li>
+					<li>Terms and Conditions</li>
+					<li>Privacy Policy</li>
+					<li>Cookie Policy</li>
+				</ul>
 			</div>
 		</footer>
 	);

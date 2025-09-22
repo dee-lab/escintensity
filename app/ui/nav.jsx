@@ -117,21 +117,21 @@ const NavBar = () => {
 	const [isChecked, setIsChecked] = useState(false);
 
 	return (
-		<div className={`${styles.navBar} flex justify-between items-center`}>
+		<div className={`${styles.navBar} flex justify-between items-center px-4`}>
 			<Link href='/'>
 				<Image
 					src='/logo-white.png'
 					width={60}
 					height={60}
 					alt='ESC Intensity logo'
-					className='pl-2 block lg:hidden'
+					className='block lg:hidden'
 				/>
 				<Image
 					src='/logo-white.png'
 					width={100}
 					height={100}
 					alt='ESC Intensity logo'
-					className='pl-2 hidden lg:block'
+					className='hidden lg:block'
 				/>
 			</Link>
 			<div className='navbar h-14 lg:hidden'>
