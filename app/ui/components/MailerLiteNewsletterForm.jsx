@@ -119,9 +119,9 @@ function NewsletterForm() {
 						<div className='ml-form-successContent'>
 							<h4 className='text-4xl'>Almost there!</h4>
 							<p>
-								You've successfully signed up for our newsletter.
-								<br /> Just one more step to confirm your email and you'll be on
-								your way to receiving all our best content.
+								You&apos;ve successfully signed up for our newsletter.
+								<br /> Just one more step to confirm your email and you&apos;ll
+								be on your way to receiving all our best content.
 							</p>
 						</div>
 					</div>
