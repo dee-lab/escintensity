@@ -19,6 +19,7 @@ const NAVITEMS = [
 		// ],
 	},
 	{ label: "Testimonials", link: "/testimonials" },
+	{ label: "FAQs", link: "/what-to-expect#faqs" },
 	{ label: "Get in touch", link: "/contact" },
 	// {label: "Free Downloads", link: "./downloads"},
 	// {label: "Merch", link: "./merch"},
