@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./NewsletterForm.css";
+import "./newsletterForm.css";
 
 function NewsletterForm() {
 	const [submitted, setSubmitted] = useState(false);
