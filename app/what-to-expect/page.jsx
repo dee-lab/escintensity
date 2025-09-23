@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
 import Header from "./sections/header";
 import FAQ from "./sections/faq";
-import FitnessGoal from "./sections/fitness-goal";
+import HelpAreas from "./sections/help-areas";
 
 export default function WhatToExpectPage() {
-  return (
-    <main>
-      <Header />
-      <FitnessGoal />
-      <FAQ />
-    </main>
-  )
+	return (
+		<main>
+			<Header />
+			<HelpAreas />
+			<FAQ />
+		</main>
+	);
 }
