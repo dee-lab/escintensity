@@ -7,7 +7,7 @@ const Footer = () => {
 		<footer className=' bg-zinc-950 text-white flex flex-col px-4'>
 			<Socials />
 			<div className='text-center md:text-left py-11 px-9'>
-				<ul className='flex flex-row gap-8 items-start'>
+				<ul className='flex flex-row gap-8 justify-center'>
 					<li>Copyright © 2025 ESC Coaching</li>
 					<li>Terms and Conditions</li>
 					<li>Privacy Policy</li>

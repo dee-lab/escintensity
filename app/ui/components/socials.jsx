@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Socials = () => {
 	return (
-		<section className='flex flex-wrap justify-evenly [&>*]:py-8 [&>*]:px-20 md:[&>*]:px-12 lg:[&>*]:px-28 border-b-[0.25px] border-zinc-500'>
+		<section className='flex flex-wrap justify-evenly [&>*]:py-8 [&>*]:px-12 lg:[&>*]:px-28 border-b-[0.25px] border-zinc-500'>
 			<Link
 				href='https://www.instagram.com/syxx.esccoaching/'
 				target='_blank'
