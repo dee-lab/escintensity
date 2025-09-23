@@ -1,32 +1,39 @@
-import { tv } from 'tailwind-variants';
+import { tv } from "tailwind-variants";
 
 export const variant = {
-  primary: 'text-white bg-zinc-800 hover:bg-red-800 focus:ring-zinc-500 dark:bg-zinc-800 dark:hover:bg-red-700 dark:focus:ring-zinc-500 dark:border-zinc-700',
-  secondary: 'text-black bg-zinc-100 hover:bg-red-800 focus:ring-zinc-500 hover:text-white dark:border-zinc-600 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-600 dark:focus:ring-zinc-500',
-  teritary: 'text-white bg-transparent border border-solid border-zinc-800 hover:bg-red-800 hover:border-red-800 focus:ring-zinc-500 focus:outline-none hover:text-white dark:border-zinc-600 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-600 dark:focus:ring-zinc-500'
-}
+	primary:
+		"text-white bg-zinc-800 hover:bg-red-800 focus:ring-zinc-500 dark:bg-zinc-800 dark:hover:bg-red-700 dark:focus:ring-zinc-500 dark:border-zinc-700",
+	secondary:
+		"text-black bg-zinc-100 hover:bg-red-800 focus:ring-zinc-500 hover:text-white dark:border-zinc-600 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-600 dark:focus:ring-zinc-500",
+	teritary:
+		"text-white bg-transparent border border-solid border-zinc-800 hover:bg-red-800 hover:border-red-800 focus:ring-zinc-500 focus:outline-none hover:text-white dark:border-zinc-600 dark:text-zinc-400 dark:hover:text-white dark:hover:bg-zinc-600 dark:focus:ring-zinc-500",
+};
 
 export const size = {
-  sm: 'text-sm px-6 py-1',
-  md: 'text-base px-6 py-3', 
-}
+	sm: "text-sm px-6 py-1",
+	md: "text-base px-6 py-3",
+	lg: "text-lg px-8 py-3",
+};
 
 const button = tv({
-  base: 'font-medium rounded-lg px-5 py-2.5 focus:ring-4 cursor-pointer flex items-center justify-center',
-  variants: {
-    variant: variant,
-    size: size,
-  },
-  defaultVariants: {
-    color: 'primary',
-    size: 'md',    
-  }
+	base: "font-medium rounded-lg px-5 py-2.5 focus:ring-4 cursor-pointer flex items-center justify-center",
+	variants: {
+		variant: variant,
+		size: size,
+	},
+	defaultVariants: {
+		color: "primary",
+		size: "md",
+	},
 });
 
-export const Button = ({children,  variant, size, className, ...props}) => {
-  return (
-    <button {...props} className={button({variant: variant, size: size, className})}>
-      {children}
-    </button>
-  )
-}
+export const Button = ({ children, variant, size, className, ...props }) => {
+	return (
+		<button
+			{...props}
+			className={button({ variant: variant, size: size, className })}
+		>
+			{children}
+		</button>
+	);
+};
