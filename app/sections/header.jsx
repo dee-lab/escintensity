@@ -13,7 +13,7 @@ const Header = () => {
 					className='mt-12 mb-8'
 					onClick={() => router.push("/what-to-expect")}
 				>
-					<span>Start your journey</span>
+					<span>Start Your Journey</span>
 				</Button>
 			</section>
 		</header>

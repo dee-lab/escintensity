@@ -15,7 +15,7 @@ const StartSection = () => {
 					size='md'
 					onClick={() => router.push("/contact")}
 				>
-					<span>Get in touch</span>
+					<span>Get In Touch</span>
 				</Button>
 			</div>
 		</section>

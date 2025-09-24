@@ -27,7 +27,7 @@ const CoachSection = () => {
 						size='md'
 						onClick={() => router.push("/coaches")}
 					>
-						<span>Find out more</span>
+						<span>Find Out More</span>
 					</Button>
 				</div>
 			</section>

@@ -97,7 +97,7 @@ function NewsletterForm() {
 
 							<div className='ml-form-embedSubmit'>
 								<button type='submit' className='primary' disabled={loading}>
-									{loading ? "Submitting..." : "Sign up"}
+									{loading ? "Submitting..." : "Sign Up"}
 								</button>
 
 								{loading && (
