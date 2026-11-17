@@ -1,38 +1,49 @@
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { Button } from "../ui/components/button";
+import Image from 'next/image'
+import Link from 'next/link'
 
-const CoachSection = () => {
-	const router = useRouter();
-	return (
-		<div className='bg-neutral-50 py-20'>
-			<section className='bg-zinc-900 text-white rounded-3xl flex flex-col-reverse lg:flex-row items-center justify-center ms-auto me-auto max-w-[80%]'>
-				<Image
-					className='rounded-3xl grow shrink basis-1/3 md:w-full px-8 pb-8 lg:p-8'
-					src='/esc-trainers.png'
-					width={450}
-					height={450}
-					alt='ESC coaches, Joel and Craig standing side by side'
-				/>
-				<div className='grow shrink basis-2/3 flex flex-col align-center text-center px-4 py-8 lg:p-0 lg:pr-8'>
-					<h2 className='md:text-5xl m-2 lg:m-6 pb-4'>
-						Unleash Your Confidence & Transform Your Body
-					</h2>
-					<h3 className='text-lg md:text-4xl m-2 lg:m-6 uppercase'>
-						West London&apos;s Online Coaches
-					</h3>
-					<Button
-						className='mt-12 mb-8'
-						variant='secondary'
-						size='md'
-						onClick={() => router.push("/coaches")}
-					>
-						<span>Find Out More</span>
-					</Button>
-				</div>
-			</section>
-		</div>
-	);
-};
+export const CoachSection = () => {
+  return (
+    <section
+      aria-labelledby="meet-syxx-heading"
+      className="bg-white px-6 py-12 text-zinc-950 md:py-16 lg:px-8"
+    >
+      <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl bg-zinc-200">
+          <Image
+            src="/Joel-coach.jpg"
+            alt="Syxx, also known as Joel, your online fitness coach"
+            width={410}
+            height={546}
+            sizes="(min-width: 1024px) 512px, 100vw"
+            className="h-auto w-full"
+          />
+        </div>
 
-export default CoachSection;
+        <div>
+          <p className="mb-4 text-sm font-semibold tracking-widest text-zinc-500">
+            Meet your coach
+          </p>
+
+          <h2
+            id="meet-syxx-heading"
+            className="!text-3xl !normal-case font-bold tracking-tight md:!text-4xl"
+          >
+            Syxx to most. Joel to some.
+          </h2>
+
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-600">
+            The person behind ESC Coaching. Get to know Syxx, his experience and what shapes his
+            approach to helping you reach your goals.
+          </p>
+
+          <Link
+            href="/coach"
+            className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-md border border-zinc-300 px-7 py-3 font-semibold transition-colors hover:border-zinc-950 hover:bg-zinc-950 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-600"
+          >
+            Meet Syxx
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}

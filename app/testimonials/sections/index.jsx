@@ -1,4 +1,4 @@
-import Header from "./header";
-import ClientTestimonials from "./client-testimonials";
+import Header from './header'
+import ClientTestimonials from './client-testimonials'
 
-export {ClientTestimonials, Header};
+export { ClientTestimonials, Header }

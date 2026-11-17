@@ -1,60 +1,44 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
 
-const Socials = () => {
-	return (
-		<section className='flex flex-wrap justify-evenly [&>*]:py-8 [&>*]:px-12 lg:[&>*]:px-28 border-b-[0.25px] border-zinc-500'>
-			<Link
-				href='https://www.instagram.com/syxx.esccoaching/'
-				target='_blank'
-				className='hover:bg-red-800'
-			>
-				<Image
-					src='/Instagram_Logo.png'
-					width={50}
-					height={50}
-					alt='Instagram Logo'
-				/>
-			</Link>
-			<Link
-				href='https://www.tiktok.com/@syxx.esccoaching/'
-				target='_blank'
-				className='hover:bg-red-800'
-			>
-				<Image
-					src='/TikTok_Logo.png'
-					width={50}
-					height={50}
-					alt='TikTok Logo'
-				/>
-			</Link>
+const SOCIALS = [
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/syxx.esccoaching/',
+    icon: '/Instagram_Logo.png',
+  },
+  {
+    name: 'TikTok',
+    href: 'https://www.tiktok.com/@syxx.esccoaching/',
+    icon: '/TikTok_Logo.png',
+  },
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/syxx.esccoaching/',
+    icon: '/Facebook_Logo.png',
+  },
+  {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/@syxx.esccoaching/',
+    icon: '/YouTube_Logo.png',
+  },
+]
 
-			<Link
-				href='https://www.facebook.com/syxx.esccoaching/'
-				target='_blank'
-				className='hover:bg-red-800'
-			>
-				<Image
-					src='/Facebook_Logo.png'
-					width={50}
-					height={50}
-					alt='Facebook Logo'
-				/>
-			</Link>
-			<Link
-				href='https://www.youtube.com/@syxx.esccoaching/'
-				target='_blank'
-				className='hover:bg-red-800'
-			>
-				<Image
-					src='/YouTube_Logo.png'
-					width={50}
-					height={50}
-					alt='Youtube Logo'
-				/>
-			</Link>
-		</section>
-	);
-};
-
-export default Socials;
+export default function Socials() {
+  return (
+    <ul aria-label="Social media" className="flex flex-wrap gap-2">
+      {SOCIALS.map(({ name, href, icon }) => (
+        <li key={name}>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${name} (opens in a new tab)`}
+            className="flex h-11 w-11 items-center justify-center rounded-lg transition-colors hover:bg-white/10"
+          >
+            <Image src={icon} alt="" width={24} height={24} className="h-6 w-6 object-contain" />
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
+}

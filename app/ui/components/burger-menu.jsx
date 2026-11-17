@@ -1,15 +1,12 @@
-import "./burger-menu.css";
+import './burger-menu.css'
 
-const BurgerMenuIcon = ({ setIsChecked, isChecked }) => {
-	return (
-		<label className='burger-menu'>
-			<input
-				type='checkbox'
-				checked={isChecked}
-				onChange={() => setIsChecked(!isChecked)}
-			/>
-		</label>
-	);
-};
+const BurgerMenuIcon = () => {
+  return (
+    <label className="burger-menu">
+      <input type="checkbox" />
+      <span className="sr-only">Toggle navigation menu</span>
+    </label>
+  )
+}
 
-export default BurgerMenuIcon;
+export default BurgerMenuIcon

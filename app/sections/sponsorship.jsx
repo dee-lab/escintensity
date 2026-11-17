@@ -1,60 +1,64 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+
+const PARTNERS = [
+  {
+    name: 'Liberty Supplements',
+    image: '/liberty-supplements.png',
+    alt: 'Syxx wearing Liberty Supplements merchandise',
+    href: 'https://www.libertysupplements.co.uk/discount/ESC10',
+    code: 'ESC10',
+  },
+]
 
 const SponsorshipSection = () => {
-	return (
-		<section className='bg-zinc-900 pt-12 pb-14 flex flex-col gap-8 text-neutral-50 '>
-			<h3 className='text-4xl text-center  my-4 uppercase'>
-				Our valued partners
-			</h3>
-			<div className='flex flex-row justify-center items-center gap-8 p-4 *:shrink *:grow *:basis-52 *:max-w-96 *:flex *:flex-col *:items-center text-center'>
-				<a
-					href='https://www.libertysupplements.co.uk/'
-					target='_blank'
-					rel='noopener'
-				>
-					<Image
-						src='/liberty-supplements.png'
-						width={500}
-						height={500}
-						alt='Syxx in Liberty Supplements merchandise'
-					/>
-					<p className='pt-4 uppercase text-lg underline hover:text-red-800'>
-						Liberty Supplements
-					</p>
+  return (
+    <section
+      aria-labelledby="partners-heading"
+      className="bg-white px-6 py-12 text-zinc-950 lg:px-8"
+    >
+      <div className="mx-auto max-w-xl">
+        <h2
+          id="partners-heading"
+          className="text-center text-3xl font-bold normal-case tracking-tight md:text-4xl"
+        >
+          Our partner
+        </h2>
 
-					<p className='pb-8 uppercase'>
-						Use Code <span className='font-bold text-red-600'>SYXX10</span>
-						<br /> for 10% off
-					</p>
-				</a>
-				<a
-					href='https://www.refinednutrition.co.uk/'
-					target='_blank'
-					rel='noopener'
-				>
-					<Image
-						src='/refined-nutrition.png'
-						width={500}
-						height={500}
-						alt='Syxx standing next to the Refined Nutrition logo at their head office'
-					/>
-					<p className='pt-4 uppercase text-lg underline hover:text-red-800'>
-						Refined Nutrition
-					</p>
-					<p className='pb-8 uppercase'>
-						Use Code <span className='font-bold text-red-600'>SYXX</span>
-						<br /> for 10% off
-					</p>
-				</a>
-				{/* As an Amazon Associate I earn from qualifying purchases. */}
-				{/* <Image src="/logo-source-performance.png" 
-          width={200} 
-          height={200}
-          alt="Source Performance logo" /> */}
-			</div>
-		</section>
-	);
-};
+        <ul className="mx-auto mt-8 max-w-xs">
+          {PARTNERS.map(({ name, image, alt, href, code }) => (
+            <li key={name} className="flex flex-col items-center gap-5 text-center">
+              <Image
+                src={image}
+                alt={alt}
+                width={500}
+                height={500}
+                sizes="192px"
+                className="h-auto w-48 shrink-0 rounded-2xl"
+              />
 
-export default SponsorshipSection;
+              <div>
+                <h3 className="text-xl font-semibold">{name}</h3>
+
+                <p className="mt-2 text-zinc-600">
+                  Use code <span className="font-bold text-red-600">{code}</span> for 10% off
+                </p>
+
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex min-h-[44px] items-center font-semibold underline underline-offset-4 hover:text-red-700"
+                >
+                  Shop {name}
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}
+
+export default SponsorshipSection
