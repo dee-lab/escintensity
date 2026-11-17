@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import NavBar from './ui/nav'
 import Footer from './ui/footer'
 import { Kanit } from 'next/font/google'
@@ -28,6 +29,7 @@ export const metadata = {
     description:
       'Personalised training, nutrition guidance and accountability to help you work towards your goals with Syxx, also known as Joel.',
   },
+
   icons: {
     icon: [
       {
@@ -49,6 +51,7 @@ export const metadata = {
       },
     ],
   },
+
   manifest: '/site.webmanifest',
 
   twitter: {
@@ -60,6 +63,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-GB">
       <body className={kanit.className}>
+        <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="010f9f87-8729-4866-b0d1-5380ba7052c7"
+          strategy="beforeInteractive"
+        />
+
         <NavBar />
         {children}
         <Footer />
