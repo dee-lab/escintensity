@@ -4,12 +4,12 @@ const QUESTIONS = [
   {
     question: 'How does online coaching work?',
     answer:
-      'Joel builds a training plan around your goals, experience and routine. You follow the plan in your own time, with check-ins and remote support to review your progress, answer questions and make adjustments.',
+      'Syxx builds a training plan around your goals, experience and routine. You follow the plan in your own time, with check-ins and remote support to review your progress, answer questions and make adjustments.',
   },
   {
     question: 'Is online coaching suitable for beginners?',
     answer:
-      'Yes. You don’t need to be experienced or already in shape to get started. Joel will help you understand your training and build confidence, with a plan that reflects your starting point.',
+      'Yes. You don’t need to be experienced or already in shape to get started. Syxx will help you understand your training and build confidence, with a plan that reflects your starting point.',
   },
   {
     question: 'How much does coaching cost?',
@@ -19,17 +19,17 @@ const QUESTIONS = [
   {
     question: 'How often will I need to train?',
     answer:
-      'Your training schedule will depend on your goals, experience and available time. Joel will work with you to create a realistic routine you can stay consistent with.',
+      'Your training schedule will depend on your goals, experience and available time. Syxx will work with you to create a realistic routine you can stay consistent with.',
   },
   {
     question: 'Do I need a gym membership?',
     answer:
-      'Not necessarily. Tell Joel what space and equipment you have available so you can discuss a suitable plan, whether you train at home or in a gym.',
+      'Not necessarily. Tell Syxx what space and equipment you have available so you can discuss a suitable plan, whether you train at home or in a gym.',
   },
   {
     question: 'What if I’m nervous about getting started?',
     answer:
-      'You can start with a conversation. A consultation gives you the chance to talk through your goals, ask questions and get to know Joel’s approach before deciding whether coaching is right for you.',
+      'You can start with a conversation. A consultation gives you the chance to talk through your goals, ask questions and get to know Syxx’s approach before deciding whether coaching is right for you.',
   },
 ]
 
@@ -85,7 +85,7 @@ export const FAQ = () => {
             href="/contact"
             className="rounded-sm font-semibold text-zinc-950 underline decoration-red-600 decoration-2 underline-offset-4 hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-600"
           >
-            Ask Joel
+            Ask Syxx
           </Link>
         </p>
       </div>

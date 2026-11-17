@@ -1,45 +1,58 @@
 import Image from 'next/image'
 
-const SPONSORS = [
+const PARTNERS = [
   {
     name: 'Liberty Supplements',
-    logo: '/logo-liberty-supplements.png',
-  },
-  {
-    name: 'Powerstone',
-    logo: '/logo-power-stone.png',
-  },
-  {
-    name: 'Source Performance',
-    logo: '/logo-source-performance.png',
+    image: '/liberty-supplements.png',
+    alt: 'Syxx wearing Liberty Supplements merchandise',
+    href: 'https://www.libertysupplements.co.uk/discount/ESC10',
+    code: 'ESC10',
   },
 ]
 
 const SponsorshipSection = () => {
   return (
     <section
-      aria-labelledby="sponsors-heading"
-      className="border-t border-white/10 bg-white px-6 py-12 text-white lg:px-8"
+      aria-labelledby="partners-heading"
+      className="bg-white px-6 py-12 text-zinc-950 lg:px-8"
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-xl">
         <h2
-          id="sponsors-heading"
-          className="text-center !text-lg !normal-case font-semibold text-zinc-300"
+          id="partners-heading"
+          className="text-center text-3xl font-bold normal-case tracking-tight md:text-4xl"
         >
-          Sponsors
+          Our partner
         </h2>
 
-        <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-6 md:gap-x-2">
-          {SPONSORS.map(({ name, logo }) => (
-            <li key={name} className="w-36">
+        <ul className="mx-auto mt-8 max-w-xs">
+          {PARTNERS.map(({ name, image, alt, href, code }) => (
+            <li key={name} className="flex flex-col items-center gap-5 text-center">
               <Image
-                src={logo}
-                alt={`${name} logo`}
-                width={200}
-                height={200}
-                sizes="(min-width: 768px) 176px, 144px"
-                className="h-24 w-full object-contain md:h-28"
+                src={image}
+                alt={alt}
+                width={500}
+                height={500}
+                sizes="192px"
+                className="h-auto w-48 shrink-0 rounded-2xl"
               />
+
+              <div>
+                <h3 className="text-xl font-semibold">{name}</h3>
+
+                <p className="mt-2 text-zinc-600">
+                  Use code <span className="font-bold text-red-600">{code}</span> for 10% off
+                </p>
+
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex min-h-[44px] items-center font-semibold underline underline-offset-4 hover:text-red-700"
+                >
+                  Shop {name}
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              </div>
             </li>
           ))}
         </ul>

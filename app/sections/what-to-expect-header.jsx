@@ -3,7 +3,7 @@ const COACHING_STEPS = [
     number: '01',
     title: 'Start with you',
     description:
-      'Talk through your goals, experience and routine with Joel. Together, identify your starting point and what you want to work towards.',
+      'Talk through your goals, experience and routine with Syxx. Together, identify your starting point and what you want to work towards.',
   },
   {
     number: '02',
@@ -15,7 +15,7 @@ const COACHING_STEPS = [
     number: '03',
     title: 'Keep moving forward',
     description:
-      'Review your progress with Joel, ask questions and adjust your plan as you go. Get the encouragement and accountability to stay consistent.',
+      'Review your progress with Syxx, ask questions and adjust your plan as you go. Get the encouragement and accountability to stay consistent.',
   },
 ]
 
@@ -24,7 +24,7 @@ export const WhatToExpectHeader = () => {
     <section
       id="what-to-expect"
       aria-labelledby="how-it-works-heading"
-      className="scroll-mt-20 bg-zinc-100 px-6 pb-16 pt-4 text-zinc-950 md:pb-20 lg:px-8"
+      className="scroll-mt-20 bg-zinc-100 px-6 py-16 text-zinc-950 md:py-16 lg:px-8"
     >
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
@@ -38,7 +38,7 @@ export const WhatToExpectHeader = () => {
           </h2>
 
           <p className="mt-5 text-lg leading-relaxed text-zinc-600">
-            You bring your goals. Joel brings the guidance, structure and support to help you work
+            You bring your goals. Syxx brings the guidance, structure and support to help you work
             towards them.
           </p>
         </div>

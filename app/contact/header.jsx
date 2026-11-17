@@ -1,18 +1,16 @@
 const Header = () => {
   return (
-    <header className="bg-zinc-950 px-6 py-16 text-white md:py-24 lg:px-8">
+    <header className="bg-white px-6 py-12 text-zinc-950 md:pt-16 pb-0 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
-        <p className="mb-4 text-sm font-semibold tracking-widest text-zinc-400">
-          The ESC community
-        </p>
+        <p className="mb-4 text-sm font-semibold tracking-widest text-zinc-500">Get started</p>
 
-        <h1 className="!text-4xl !normal-case font-bold tracking-tight md:!text-5xl">
-          Real people. Personal progress.
+        <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+          Let’s talk about your goals.
         </h1>
 
-        <p className="mt-6 text-lg leading-relaxed text-zinc-300">
-          From building confidence to finding a routine that fits, hear what coaching with Joel has
-          meant to his clients.
+        <p className="mt-5 text-lg leading-relaxed text-zinc-600">
+          Fill in the form below to request a free consultation with Syxx. We’ll talk through your
+          goals, what’s getting in the way and how online coaching could fit into your life.
         </p>
       </div>
     </header>

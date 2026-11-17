@@ -8,7 +8,7 @@ export const ServicesHeader = () => {
     >
       <div className="mx-auto max-w-2xl text-center">
         <p className="mb-4 text-sm font-semibold tracking-widest text-zinc-500">
-          Coaching with Joel
+          Coaching with Syxx
         </p>
 
         <h2 className="!text-3xl !normal-case font-bold tracking-tight md:!text-4xl">
@@ -17,7 +17,7 @@ export const ServicesHeader = () => {
 
         <p className="mt-5 text-lg leading-relaxed text-zinc-600">
           Support for your training, your goals and the life around them. Explore how you can work
-          with Joel.
+          with Syxx.
         </p>
       </div>
     </header>
@@ -54,29 +54,39 @@ export const ServicesComparisonTable = () => {
           aria-labelledby="comparison-heading"
           aria-describedby="comparison-scroll-hint"
           tabIndex={0}
-          className="mt-4 overflow-x-auto rounded-2xl border border-zinc-200 bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-600 lg:mt-10"
+          className="mt-6 rounded-2xl border border-zinc-200 bg-white lg:mt-10"
         >
-          <table className="w-full min-w-[480px] border-collapse text-sm">
+          <table className="w-full table-fixed border-separate border-spacing-0 text-sm">
             <caption className="sr-only">Features included in each ESC Coaching option</caption>
 
-            <thead className="bg-zinc-100 text-zinc-950">
+            <thead>
               <tr>
-                <th scope="col" className="w-1/3 px-6 py-6 text-left font-semibold">
+                <th
+                  scope="col"
+                  className="sticky top-20 z-20 w-1/3 rounded-tl-2xl bg-zinc-100 px-3 py-5 text-left font-semibold"
+                >
                   Support and features
                 </th>
 
                 {PACKAGES.map(({ key, label }) => (
-                  <th key={key} scope="col" className="px-4 py-6 text-center font-semibold">
+                  <th
+                    key={key}
+                    scope="col"
+                    className="sticky top-20 z-20 bg-zinc-100 px-3 py-5 text-center font-semibold last:rounded-tr-2xl"
+                  >
                     {label}
                   </th>
                 ))}
               </tr>
             </thead>
 
-            <tbody>
+            <tbody className="[&>tr:last-child>th]:rounded-bl-2xl [&>tr:last-child>td:last-child]:rounded-br-2xl">
               {data.map((item) => (
-                <tr key={item.service} className="border-t border-zinc-200 even:bg-zinc-50">
-                  <th scope="row" className="px-6 py-5 text-left font-medium text-zinc-700">
+                <tr key={item.service} className="border-t border-zinc-200 even:[&>*]:bg-zinc-50">
+                  <th
+                    scope="row"
+                    className="break-words px-3 py-5 text-left font-medium text-zinc-700 md:px-6"
+                  >
                     {item.service}
                   </th>
 

@@ -16,7 +16,7 @@ const Header = () => {
       <div className="mx-auto flex min-h-[560px] max-w-7xl items-center px-6 py-20 md:min-h-[640px] lg:px-8">
         <div className="max-w-3xl">
           <p className="mb-5 text-sm font-semibold tracking-widest text-zinc-300">
-            Online fitness coaching with Joel
+            Online fitness coaching with Syxx
           </p>
 
           <h1 className="!text-4xl !normal-case font-bold leading-tight tracking-tight sm:!text-5xl lg:!text-6xl">
@@ -37,12 +37,13 @@ const Header = () => {
               Get started
             </Link>
 
-            <Link
+            {/* TODO: UNCOMMENT THIS */}
+            {/* <Link
               href="/testimonials"
               className="inline-flex min-h-[48px] items-center justify-center rounded-md border border-white/30 px-7 py-3 font-semibold text-white transition-colors hover:border-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               See client results
-            </Link>
+            </Link> */}
           </div>
 
           <p className="mt-8 text-sm text-zinc-400">Every Session Counts. Your goals, your pace.</p>

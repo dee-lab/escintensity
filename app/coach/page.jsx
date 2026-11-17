@@ -4,11 +4,11 @@ import Link from 'next/link'
 const COACH_IMAGES = {
   portrait: {
     src: '/Joel-coach.jpg',
-    alt: 'Joel, also known as Syxx, lifestyle transformation coach',
+    alt: "Syxx's, also known as Joel, lifestyle transformation coach",
   },
   client: {
-    src: '/Joel-transformation.jpg',
-    alt: "Joel's before and after transformation",
+    src: '/Joel-transformation.png',
+    alt: "Syxx's before and after transformation",
   },
 }
 
@@ -21,10 +21,25 @@ const SPECIALISMS = [
   'Tailored nutrition plans',
 ]
 
+export const metadata = {
+  title: 'Meet Syxx',
+  description:
+    'Meet Syxx, also known as Joel, the coach behind ESC Coaching. Discover his experience and approach to training, nutrition and lasting lifestyle changes.',
+  alternates: {
+    canonical: '/coach',
+  },
+  openGraph: {
+    title: 'Meet Syxx | ESC Coaching',
+    description:
+      'Get to know Syxx, also known as Joel, and his approach to helping you build strength, confidence and lasting habits.',
+    url: '/coach',
+  },
+}
+
 export default function CoachJoel() {
   return (
-    <main className="bg-neutral-50 text-zinc-950">
-      <section aria-labelledby="coach-heading" className="px-6 py-16 md:py-24 lg:px-8">
+    <main className="bg-white text-zinc-950">
+      <section aria-labelledby="coach-heading" className="px-6 py-12 md:py-16 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <p className="mb-4 text-sm font-semibold tracking-widest text-zinc-500">
@@ -33,10 +48,10 @@ export default function CoachJoel() {
 
             <h1
               id="coach-heading"
-              className="!text-4xl !normal-case font-bold tracking-tight md:!text-6xl"
+              className="text-4xl font-bold normal-case tracking-tight md:text-6xl"
             >
-              I’m Joel.
-              <span className="mt-2 block text-zinc-500">Also known as Syxx.</span>
+              I’m Syxx.
+              <span className="mt-2 block text-zinc-500">Also known as Joel.</span>
             </h1>
 
             <p className="mt-6 text-xl font-medium">Lifestyle transformation coach</p>
@@ -59,14 +74,14 @@ export default function CoachJoel() {
             </Link>
           </div>
 
-          <div className="mx-auto w-full max-w-lg overflow-hidden rounded-2xl bg-zinc-200">
+          <div className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl bg-zinc-200">
             <Image
               src={COACH_IMAGES.portrait.src}
               alt={COACH_IMAGES.portrait.alt}
               width={410}
               height={546}
               priority
-              sizes="(min-width: 1024px) 512px, 100vw"
+              sizes="(min-width: 432px) 384px, calc(100vw - 48px)"
               className="h-auto w-full"
             />
           </div>
@@ -75,38 +90,37 @@ export default function CoachJoel() {
 
       <section
         aria-labelledby="experience-heading"
-        className="bg-zinc-950 px-6 py-16 text-white md:py-24 lg:px-8"
+        className="bg-zinc-100 px-6 py-12 md:py-16 lg:px-8"
       >
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="order-2 mx-auto w-full max-w-lg overflow-hidden rounded-2xl lg:order-1">
+          <div className="relative order-2 mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl lg:order-1">
             <Image
               src="/Joel-comp.jpg"
-              alt="Joel posing at a bodybuilding competition"
-              width={410}
-              height={546}
-              sizes="(min-width: 1024px) 512px, 100vw"
-              className="h-auto w-full"
+              alt="Syxx posing at a bodybuilding competition"
+              fill
+              sizes="(min-width: 432px) 384px, calc(100vw - 48px)"
+              className="object-cover object-center"
             />
           </div>
 
           <div className="order-1 lg:order-2">
-            <p className="mb-4 text-sm font-semibold tracking-widest text-zinc-400">
+            <p className="mb-4 text-sm font-semibold tracking-widest text-zinc-500">
               Experience behind the coaching
             </p>
 
             <h2
               id="experience-heading"
-              className="!text-3xl !normal-case font-bold tracking-tight md:!text-4xl"
+              className="text-3xl font-bold normal-case tracking-tight md:text-4xl"
             >
               I’ve been on the journey too.
             </h2>
 
-            <p className="mt-6 text-lg leading-relaxed text-zinc-300">
+            <p className="mt-6 text-lg leading-relaxed text-zinc-600">
               I’ve been through my own physique transformations, including competitive bodybuilding.
               That experience has shaped how I train and how I support my clients.
             </p>
 
-            <p className="mt-4 text-lg leading-relaxed text-zinc-300">
+            <p className="mt-4 text-lg leading-relaxed text-zinc-600">
               I understand that progress comes with challenges. My role is to help you work through
               them, understand your training and keep moving towards your goals.
             </p>
@@ -114,7 +128,7 @@ export default function CoachJoel() {
         </div>
       </section>
 
-      <section aria-labelledby="approach-heading" className="px-6 py-16 md:py-24 lg:px-8">
+      <section aria-labelledby="approach-heading" className="px-6 py-12 md:py-16 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <p className="mb-4 text-sm font-semibold tracking-widest text-zinc-500">
@@ -123,7 +137,7 @@ export default function CoachJoel() {
 
             <h2
               id="approach-heading"
-              className="!text-3xl !normal-case font-bold tracking-tight md:!text-4xl"
+              className="text-3xl font-bold normal-case tracking-tight md:text-4xl"
             >
               Coaching built around you.
             </h2>
@@ -138,7 +152,7 @@ export default function CoachJoel() {
               your goals and fits your life.
             </p>
 
-            <h3 className="mt-8 !text-xl !normal-case font-semibold">Specialist areas</h3>
+            <h3 className="mt-8 text-xl font-semibold">Specialist areas</h3>
 
             <ul className="mt-4 flex flex-wrap gap-3">
               {SPECIALISMS.map((specialism) => (
@@ -152,22 +166,22 @@ export default function CoachJoel() {
             </ul>
           </div>
 
-          <div className="mx-auto w-full max-w-lg overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3">
+          <div className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3">
             <Image
               src={COACH_IMAGES.client.src}
               alt={COACH_IMAGES.client.alt}
               width={410}
               height={410}
-              sizes="(min-width: 1024px) 512px, 100vw"
+              sizes="(min-width: 432px) 358px, calc(100vw - 74px)"
               className="h-auto w-full rounded-xl"
             />
           </div>
         </div>
       </section>
 
-      <section aria-label="Client feedback" className="bg-zinc-100 px-6 py-16 lg:px-8">
+      <section aria-label="Client feedback" className="bg-zinc-100 px-6 py-12 md:py-16 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2">
-          <figure className="rounded-2xl border border-zinc-200 bg-white p-8">
+          <figure className="rounded-2xl border border-zinc-200 bg-white p-6 md:p-8">
             <blockquote className="text-lg leading-relaxed text-zinc-600">
               <p>
                 “Syxx has been pivotal to the way that I have not only changed and made my body
@@ -178,7 +192,7 @@ export default function CoachJoel() {
             <figcaption className="mt-6 font-semibold">Ludwig A.</figcaption>
           </figure>
 
-          <figure className="rounded-2xl border border-zinc-200 bg-white p-8">
+          <figure className="rounded-2xl border border-zinc-200 bg-white p-6 md:p-8">
             <blockquote className="text-lg leading-relaxed text-zinc-600">
               <p>
                 “Signing up with Syxx was the best decision I could have made for my fitness goals.”
@@ -192,7 +206,7 @@ export default function CoachJoel() {
         <div className="mt-8 text-center">
           <Link
             href="/testimonials"
-            className="rounded-sm font-semibold underline decoration-red-600 decoration-2 underline-offset-4 hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-600"
+            className="inline-flex min-h-[48px] items-center rounded-sm font-semibold underline decoration-red-600 decoration-2 underline-offset-4 hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-600"
           >
             Read more client stories
           </Link>
@@ -201,24 +215,24 @@ export default function CoachJoel() {
 
       <section
         aria-labelledby="get-started-heading"
-        className="bg-zinc-950 px-6 py-16 text-center text-white md:py-20 lg:px-8"
+        className="bg-white px-6 py-12 text-center text-zinc-950 md:py-16 lg:px-8"
       >
         <div className="mx-auto max-w-2xl">
           <h2
             id="get-started-heading"
-            className="!text-3xl !normal-case font-bold tracking-tight md:!text-4xl"
+            className="text-3xl font-bold normal-case tracking-tight md:text-4xl"
           >
             Let’s talk about your goals.
           </h2>
 
-          <p className="mt-5 text-lg leading-relaxed text-zinc-300">
+          <p className="mt-5 text-lg leading-relaxed text-zinc-600">
             Tell me where you’re starting and what you want to achieve. We can explore how coaching
             could work for you.
           </p>
 
           <Link
             href="/contact"
-            className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-md bg-red-600 px-7 py-3 font-semibold text-white transition-colors hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-500"
+            className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-md bg-red-600 px-7 py-3 font-semibold text-white transition-colors hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-600"
           >
             Get started
           </Link>

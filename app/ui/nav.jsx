@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { label: 'Coaching', href: '/#services' },
   { label: 'How it works', href: '/#what-to-expect' },
   { label: 'Client results', href: '/testimonials' },
-  { label: 'Meet Joel', href: '/coach' },
+  { label: 'Meet Syxx', href: '/coach' },
 ]
 
 const NavBar = () => {

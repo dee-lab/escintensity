@@ -15,7 +15,7 @@ const FITNESS_GOALS = [
     icon: 'route',
     title: 'Road mapping your journey',
     description:
-      'Work with Joel to set your goals, understand your starting point and create a realistic plan. Know what to focus on and how to move forward.',
+      'Work with Syxx to set your goals, understand your starting point and create a realistic plan. Know what to focus on and how to move forward.',
   },
 ]
 
@@ -39,7 +39,7 @@ export const FitnessGoal = () => {
           </h2>
 
           <p className="mt-5 text-lg leading-relaxed text-zinc-600">
-            Whether you want to lose weight, get stronger or need a clear direction, Joel will help
+            Whether you want to lose weight, get stronger or need a clear direction, Syxx will help
             you build a plan around your goals.
           </p>
         </div>

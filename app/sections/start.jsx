@@ -17,7 +17,7 @@ const StartSection = () => {
         </h2>
 
         <p className="mt-5 text-lg leading-relaxed text-zinc-600">
-          Tell Joel where you’re starting, what you want to achieve and where you need support.
+          Tell Syxx where you’re starting, what you want to achieve and where you need support.
           Together, you can explore how online coaching could work for you.
         </p>
 

@@ -6,7 +6,7 @@ const COACHING_OPTIONS = [
     label: 'Flexible support',
     title: 'Online coaching',
     description:
-      'A personalised training programme built around your goals, experience and routine, with guidance from Joel as you progress.',
+      'A personalised training programme built around your goals, experience and routine, with guidance from Syxx as you progress.',
     action: 'Ask about online coaching',
     featured: true,
   },

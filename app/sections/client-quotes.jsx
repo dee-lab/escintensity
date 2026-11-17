@@ -73,7 +73,7 @@ const ClientQuotes = () => {
 
         <div className="mt-8 text-center">
           <Link
-            href="/testimonials"
+            href="/testimonials#client-stories"
             className="rounded-sm font-semibold underline decoration-red-600 decoration-2 underline-offset-4 hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-600"
           >
             Read the full client stories
