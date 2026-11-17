@@ -26,7 +26,7 @@ export const metadata = {
     siteName: 'ESC Coaching',
     title: 'ESC Coaching | Online Fitness Coaching with Syxx',
     description:
-      'Personalised training, nutrition guidance and accountability to help you work towards your goals with Syxx, also known as Syxx.',
+      'Personalised training, nutrition guidance and accountability to help you work towards your goals with Syxx, also known as Joel.',
   },
   icons: {
     icon: [
