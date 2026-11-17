@@ -8,11 +8,11 @@ import {
   CoachSection,
 } from './sections'
 import ClientResultsSection from './sections/client-results'
-import SponsorshipSection from './sections/sponsorship'
+// import SponsorshipSection from './sections/sponsorship'
 import StartSection from './sections/start'
 import ClientQuotes from './sections/client-quotes'
 import ServicesPackages from './sections/services-packages'
-import TrainingTips from './sections/training-tips'
+// import TrainingTips from './sections/training-tips'
 
 export const metadata = {
   title: {

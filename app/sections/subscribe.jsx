@@ -1,11 +1,11 @@
-import {Input} from '../ui/components/sign-up-form'
+import { Input } from '../ui/components/sign-up-form'
 
 const Subscribe = () => {
   return (
     <section className="bg-neutral-50 py-12 px-36 ">
-      <Input/>
+      <Input />
     </section>
   )
 }
 
-export default Subscribe;
+export default Subscribe

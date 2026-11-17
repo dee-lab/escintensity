@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import CLIENT_RESULTS from '../data/client-results'
 
 export default function ClientResultsSection() {
   const FEATURED_RESULTS = [

@@ -11,7 +11,7 @@ const VIDEOS = [
 const VideoCard = ({ id, title }) => {
   const [isPlaying, setIsPlaying] = useState(false)
 
-  const useFallback = (event) => {
+  const handleThumbnailFallback = (event) => {
     const image = event.currentTarget
     const fallback = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`
 
@@ -56,10 +56,10 @@ const VideoCard = ({ id, title }) => {
               height={720}
               onLoad={(event) => {
                 if (event.currentTarget.naturalWidth === 120) {
-                  useFallback(event)
+                  handleThumbnailFallback(event)
                 }
               }}
-              onError={useFallback}
+              onError={handleThumbnailFallback}
               className="absolute inset-0 h-full w-full object-cover"
             />
 

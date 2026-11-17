@@ -52,8 +52,6 @@ export const ServicesComparisonTable = () => {
         <div
           role="region"
           aria-labelledby="comparison-heading"
-          aria-describedby="comparison-scroll-hint"
-          tabIndex={0}
           className="mt-6 rounded-2xl border border-zinc-200 bg-white lg:mt-10"
         >
           <table className="w-full table-fixed border-separate border-spacing-0 text-sm">

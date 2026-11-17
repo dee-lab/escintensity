@@ -62,6 +62,14 @@ export default function ResultsGallery() {
     }
   }, [])
 
+  const moveSelection = (direction) => {
+    setSelectedIndex((currentIndex) => {
+      if (currentIndex === null) return null
+
+      return (currentIndex + direction + CLIENT_RESULTS.length) % CLIENT_RESULTS.length
+    })
+  }
+
   return (
     <section
       id="transformations"
@@ -163,6 +171,8 @@ export default function ResultsGallery() {
         </button>
       )}
 
+      {/* Native modal supports backdrop clicks and arrow-key navigation. */}
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
       <dialog
         ref={dialogRef}
         aria-labelledby="result-dialog-heading"
@@ -195,7 +205,6 @@ export default function ResultsGallery() {
 
               <button
                 type="button"
-                autoFocus
                 onClick={() => setSelectedIndex(null)}
                 className="min-h-11 rounded-md px-4 text-sm font-semibold hover:bg-zinc-100"
               >
