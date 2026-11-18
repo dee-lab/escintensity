@@ -4,6 +4,7 @@ import Footer from './ui/footer'
 import { Kanit } from 'next/font/google'
 import './ui/globals.css'
 import './ui/globalIcons.css'
+import GoogleAnalytics from './ui/google-analytics'
 
 const kanit = Kanit({
   weight: '400',
@@ -69,7 +70,7 @@ export default function RootLayout({ children }) {
           data-cbid="010f9f87-8729-4866-b0d1-5380ba7052c7"
           strategy="beforeInteractive"
         />
-
+        <GoogleAnalytics />
         <NavBar />
         {children}
         <Footer />
